@@ -8,15 +8,17 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 /**
+ * <p><b>Base URLs should always end in {@code /}.</b>
+ * <p><b>Endpoint values which contain a leading {@code /} are absolute.</b>
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:8080", addConverterFactory = {GsonConverterFactory.class})
+@RetrofitBuilder(baseUrl = "http://localhost:8080/", addConverterFactory = {GsonConverterFactory.class})
 public interface HelloApi {
     /**
      * call hello API method of backend service
      * @param message message
      * @return
      */
-    @GET("/v1/hello/{message}")
+    @GET("v1/hello/{message}")
     Call<HelloBean> hello(@Path("message") String message);
 }
