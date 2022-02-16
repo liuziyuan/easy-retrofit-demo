@@ -1,0 +1,33 @@
+package controller;
+
+import api.HelloApi;
+import domain.HelloBean;
+import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+
+/**
+ * @author liuziyuan
+ */
+@Slf4j
+@Api(tags = "Hello Api")
+@RestController
+@RequestMapping("/v1/hello")
+public class HelloController {
+
+    @Autowired
+    private HelloApi helloApi;
+
+    @GetMapping("/{message}")
+    public ResponseEntity<HelloBean> hello(@PathVariable String message) throws IOException {
+        final HelloBean body = helloApi.hello(message).execute().body();
+        return ResponseEntity.ok(body);
+    }
+}
