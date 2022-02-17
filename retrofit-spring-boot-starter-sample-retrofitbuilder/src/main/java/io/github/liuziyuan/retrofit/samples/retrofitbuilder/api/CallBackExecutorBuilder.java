@@ -2,15 +2,14 @@ package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
 
 import io.github.liuziyuan.retrofit.extension.BaseCallBackExecutorBuilder;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Executor;
 
 /**
+ *
  * @author liuziyuan
  */
 @Slf4j
-@Component
 public class CallBackExecutorBuilder extends BaseCallBackExecutorBuilder {
 
     @Override

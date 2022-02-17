@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
 
 import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -18,7 +19,10 @@ import retrofit2.http.Path;
         addConverterFactory = {GsonConvertFactoryBuilder.class},
         addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class},
         callbackExecutor = CallBackExecutorBuilder.class,
-        validateEagerly = true)
+        client = OkHttpClientBuilder.class,
+        validateEagerly = false)
+@RetrofitInterceptor(handler = LoggingInterceptor.class)
+@RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
 public interface HelloApi {
     /**
      * call hello API method of backend service
