@@ -1,4 +1,4 @@
-package config;
+package io.github.liuziyuan.retrofit.samples.retrofitbuilder.config;
 
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Value;

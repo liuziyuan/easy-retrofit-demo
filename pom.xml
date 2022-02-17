@@ -11,6 +11,7 @@
     <modules>
         <module>retrofit-spring-boot-starter-sample-backend-services</module>
         <module>retrofit-spring-boot-starter-sample-quickstart</module>
+        <module>retrofit-spring-boot-starter-sample-retrofitbuilder</module>
     </modules>
 
     <parent>
@@ -33,7 +34,7 @@
             <artifactId>retrofit-spring-boot-starter</artifactId>
             <version>${retrofit.version}</version>
         </dependency>
-        
+
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -1,4 +1,4 @@
-package domain;
+package io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain;
 
 import lombok.Data;
 

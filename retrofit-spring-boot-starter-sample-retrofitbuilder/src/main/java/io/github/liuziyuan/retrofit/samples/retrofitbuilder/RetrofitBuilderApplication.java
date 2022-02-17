@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-@EnableRetrofit
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.retrofitbuilder.api")
 @SpringBootApplication
-public class QuickStartApplication {
+public class RetrofitBuilderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(QuickStartApplication.class, args);
+        SpringApplication.run(RetrofitBuilderApplication.class, args);
     }
 }

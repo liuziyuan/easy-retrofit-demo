@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-@EnableRetrofit
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.quickstart.api")
 @SpringBootApplication
 public class QuickStartApplication {
     public static void main(String[] args) {
