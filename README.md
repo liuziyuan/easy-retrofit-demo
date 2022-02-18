@@ -1,5 +1,7 @@
 # Retrofit-spring-boot-starter-samples
 
+swagger-ui URL: Swagger-UI URL: http://localhost:{server.port}/swagger-ui/index.html
+
 ### retrofit-spring-boot-starter-sample-backend-services
 
 The backed service needs to be started first, and other sample applications will call it
