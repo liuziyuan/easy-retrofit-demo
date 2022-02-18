@@ -22,7 +22,7 @@ import retrofit2.http.Path;
         client = OkHttpClientBuilder.class,
         validateEagerly = false)
 @RetrofitInterceptor(handler = LoggingInterceptor.class)
-@RetrofitInterceptor(handler = MyRetrofitInterceptor.class, exclude = "v1/hello/*")
+@RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
 public interface HelloApi {
     /**
      * call hello API method of backend service
