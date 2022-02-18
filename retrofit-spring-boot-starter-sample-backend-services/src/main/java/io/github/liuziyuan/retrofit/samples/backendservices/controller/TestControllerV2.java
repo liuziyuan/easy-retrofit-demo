@@ -1,4 +1,4 @@
-package io.github.liuziyuan.retrofit.samples.backendservices.controller.v2;
+package io.github.liuziyuan.retrofit.samples.backendservices.controller;
 
 import io.github.liuziyuan.retrofit.samples.backendservices.domain.HelloBean;
 import io.swagger.annotations.Api;
@@ -15,10 +15,10 @@ import java.util.Random;
  * @author liuziyuan
  */
 @Slf4j
-@Api(tags = "Test Api")
+@Api(tags = "Test Api2")
 @RestController
 @RequestMapping("/v2/test")
-public class TestController {
+public class TestControllerV2 {
 
     @GetMapping("/{message}")
     public ResponseEntity<HelloBean> hello(@PathVariable String message) {

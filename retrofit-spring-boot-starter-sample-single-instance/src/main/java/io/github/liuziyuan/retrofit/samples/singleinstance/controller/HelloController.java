@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.singleinstance.controller;
 
 import io.github.liuziyuan.retrofit.samples.singleinstance.api.HelloApi;
-import io.github.liuziyuan.retrofit.samples.singleinstance.domain.HelloBean;
+import io.github.liuziyuan.retrofit.samples.singleinstance.api.HelloApiV2;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +25,13 @@ public class HelloController {
     @Autowired
     private HelloApi helloApi;
 
+    @Autowired
+    private HelloApiV2 helloApiV2;
+
     @GetMapping("/{message}")
-    public ResponseEntity<HelloBean> hello(@PathVariable String message) throws IOException {
-        final HelloBean body = helloApi.hello(message).execute().body();
-        return ResponseEntity.ok(body);
+    public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
+        final String body = helloApi.hello(message).execute().body().getMessage();
+        final String bodyV2 = helloApiV2.hello(message).execute().body().getMessage();
+        return ResponseEntity.ok(body + "-" + bodyV2);
     }
 }

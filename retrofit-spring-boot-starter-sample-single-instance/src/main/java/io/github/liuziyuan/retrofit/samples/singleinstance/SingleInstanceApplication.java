@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.retrofitbuilder.api")
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.singleinstance.api")
 @SpringBootApplication
 public class SingleInstanceApplication {
     public static void main(String[] args) {
