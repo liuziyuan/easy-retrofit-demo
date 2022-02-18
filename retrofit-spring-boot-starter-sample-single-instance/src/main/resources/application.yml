@@ -1,0 +1,10 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: retrofitbuilder
+
+app:
+  hello:
+    url: http://localhost:8080/
