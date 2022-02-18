@@ -1,5 +1,18 @@
 #Retrofit-spring-boot-starter-samples-retrofitbuilder
 
+Inherit `BaseCallAdapterFactoryBuilder` to build a Retrofit `CallAdapter.Factory`
+
+Inherit `BaseConverterFactoryBuilder` to build a Retrofit `Converter.Factory`
+
+Inherit `BaseCallFactoryBuilder` to build a Retrofit `Call.Factory`
+
+Inherit `BaseCallBackExecutorBuilder` to build a Retrofit `CallBackExecutor`
+
+Inherit `BaseOkHttpClientBuilder` to build a Retrofit `OkHttpClient.Builder`
+
+Inherit `BaseInterceptor` to intercept a OkHttpClient `Interceptor`
+
+
 If any builder or interceptor needs to inject spring managed objects, it needs to add @ component and @ Autowired
 
 ```java
