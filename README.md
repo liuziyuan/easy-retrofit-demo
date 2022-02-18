@@ -11,3 +11,7 @@ A quick start example to help you quickly use retrofit-spring-boot-starter
 ### retrofit-spring-boot-starter-sample-retrofitbuilder
 
 Tell you how to complete the configuration of Retrofit.Builder through @RetrofitBuilder and @RetrofitInterceptor
+
+### retrofit-spring-boot-starter-sample-inherit
+
+Tell you how to use interface inheritance to place hundreds of API interfaces

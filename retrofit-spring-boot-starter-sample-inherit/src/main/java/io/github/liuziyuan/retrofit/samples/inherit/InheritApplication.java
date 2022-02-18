@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.retrofitbuilder.api")
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.inherit.api")
 @SpringBootApplication
 public class InheritApplication {
     public static void main(String[] args) {

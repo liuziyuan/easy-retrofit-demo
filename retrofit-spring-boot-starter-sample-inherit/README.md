@@ -1,47 +1,68 @@
-#Retrofit-spring-boot-starter-samples-retrofitbuilder
+#Retrofit-spring-boot-starter-samples-inherit
 
-Inherit `BaseCallAdapterFactoryBuilder` to build a Retrofit `CallAdapter.Factory`
+### If you have hundreds of APIs and these APIs have the same HostURL, you certainly don't want to put all APIs in the same Interface file, so you can create a BaseAPI Interface to create a retrofit instance, and other interface files inherit the BaseAPI.
 
-Inherit `BaseConverterFactoryBuilder` to build a Retrofit `Converter.Factory`
+### In this way, your code will be more structured and readable
 
-Inherit `BaseCallFactoryBuilder` to build a Retrofit `Call.Factory`
+### BaseAPI
+```java
+@RetrofitBuilder(baseUrl = "${app.hello.url}",
+        addConverterFactory = {GsonConvertFactoryBuilder.class},
+        client = OkHttpClientBuilder.class)
+@RetrofitInterceptor(handler = LoggingInterceptor.class)
+@RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
+public interface BaseApi {
+}
 
-Inherit `BaseCallBackExecutorBuilder` to build a Retrofit `CallBackExecutor`
+```
 
-Inherit `BaseOkHttpClientBuilder` to build a Retrofit `OkHttpClient.Builder`
+### Inherited API
+```java
+public interface HelloApi extends BaseApi {
+    /**
+     * call hello API method of backend service
+     *
+     * @param message message
+     * @return
+     */
+    @GET("v1/hello/{message}")
+    Call<HelloBean> hello(@Path("message") String message);
+}
 
-Inherit `BaseInterceptor` to intercept a OkHttpClient `Interceptor`
-
-
-If any builder or interceptor needs to inject spring managed objects, it needs to add @ component and @ Autowired
+```
 
 ```java
-@Slf4j
-@Component
-public class MyRetrofitInterceptor extends BaseInterceptor {
+public interface TestApi extends BaseApi {
 
-    @Autowired
-    private RetrofitResourceContext context;
-
-    @SneakyThrows
-    @Override
-    protected Response executeIntercept(Chain chain) {
-        Request request = chain.request();
-        String clazzName = Objects.requireNonNull(request.tag(Invocation.class)).method().getDeclaringClass().getName();
-        final RetrofitServiceBean currentServiceBean = context.getRetrofitServiceBean(clazzName);
-        // TODO if you need
-        return chain.proceed(request);
-    }
+    /**
+     * call test API method of backend service
+     *
+     * @param message message
+     * @return
+     */
+    @GET("v1/test/{message}")
+    Call<HelloBean> hello(@Path("message") String message);
 }
 ```
-In general, refer to the following, It doesn't need to be managed by spring container
 
+### Call API in Controller
 ```java
-public class GsonConvertFactoryBuilder extends BaseConverterFactoryBuilder {
-    @Override
-    public Converter.Factory buildConverterFactory() {
-        return GsonConverterFactory.create();
+@Slf4j
+@Api(tags = "Hello Api")
+@RestController
+@RequestMapping("/v1/hello")
+public class HelloController {
+
+    @Autowired
+    private HelloApi helloApi;
+    @Autowired
+    private TestApi testApi;
+
+    @GetMapping("/{message}")
+    public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
+        final HelloBean helloBody = helloApi.hello(message).execute().body();
+        final HelloBean testBody = testApi.hello(message).execute().body();
+        return ResponseEntity.ok(helloBody.getMessage() + " - " + testBody.getMessage());
     }
 }
-
 ```
