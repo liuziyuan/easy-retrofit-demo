@@ -21,7 +21,7 @@ import java.util.Random;
 public class HelloController {
 
     @GetMapping("/{message}")
-    public ResponseEntity<HelloBean> hello(@PathVariable String message) {
+    public ResponseEntity<HelloBean> hello(@PathVariable String message) throws InterruptedException {
         HelloBean helloBean = new HelloBean();
         helloBean.setMessage(message + new Random().nextInt());
         return ResponseEntity.ok(helloBean);
