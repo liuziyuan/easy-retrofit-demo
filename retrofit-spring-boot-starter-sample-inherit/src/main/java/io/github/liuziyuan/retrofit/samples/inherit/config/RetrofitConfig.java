@@ -1,4 +1,4 @@
-package io.github.liuziyuan.retrofit.samples.retrofitbuilder.config;
+package io.github.liuziyuan.retrofit.samples.inherit.config;
 
 import io.github.liuziyuan.retrofit.RetrofitResourceDefinitionRegistry;
 import org.springframework.context.annotation.Bean;

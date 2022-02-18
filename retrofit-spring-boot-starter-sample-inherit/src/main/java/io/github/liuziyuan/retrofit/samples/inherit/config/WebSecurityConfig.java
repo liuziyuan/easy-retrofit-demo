@@ -1,4 +1,4 @@
-package io.github.liuziyuan.retrofit.samples.retrofitbuilder.config;
+package io.github.liuziyuan.retrofit.samples.inherit.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

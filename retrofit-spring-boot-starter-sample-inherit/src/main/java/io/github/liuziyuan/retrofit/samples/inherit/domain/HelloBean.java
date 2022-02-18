@@ -1,4 +1,4 @@
-package io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain;
+package io.github.liuziyuan.retrofit.samples.inherit.domain;
 
 import lombok.Data;
 

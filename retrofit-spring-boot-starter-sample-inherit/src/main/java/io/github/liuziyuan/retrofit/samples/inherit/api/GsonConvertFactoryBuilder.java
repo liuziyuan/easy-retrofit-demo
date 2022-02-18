@@ -1,4 +1,4 @@
-package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
+package io.github.liuziyuan.retrofit.samples.inherit.api;
 
 import io.github.liuziyuan.retrofit.extension.BaseConverterFactoryBuilder;
 import retrofit2.Converter;

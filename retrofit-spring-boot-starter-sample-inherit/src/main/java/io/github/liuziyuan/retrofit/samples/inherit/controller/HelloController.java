@@ -1,7 +1,7 @@
-package io.github.liuziyuan.retrofit.samples.retrofitbuilder.controller;
+package io.github.liuziyuan.retrofit.samples.inherit.controller;
 
-import io.github.liuziyuan.retrofit.samples.retrofitbuilder.api.HelloApi;
-import io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain.HelloBean;
+import io.github.liuziyuan.retrofit.samples.inherit.api.HelloApi;
+import io.github.liuziyuan.retrofit.samples.inherit.domain.HelloBean;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
