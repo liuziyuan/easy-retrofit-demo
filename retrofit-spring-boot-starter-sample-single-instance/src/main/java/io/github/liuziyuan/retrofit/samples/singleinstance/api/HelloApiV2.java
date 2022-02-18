@@ -15,12 +15,12 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "${app.hello.v1.url}",
+@RetrofitBuilder(baseUrl = "${app.hello.v2.url}",
         addConverterFactory = {GsonConvertFactoryBuilder.class},
         addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class})
 @RetrofitInterceptor(handler = LoggingInterceptor.class)
 @RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
-public interface HelloApi {
+public interface HelloApiV2 {
     /**
      * call hello API method of backend service
      *
