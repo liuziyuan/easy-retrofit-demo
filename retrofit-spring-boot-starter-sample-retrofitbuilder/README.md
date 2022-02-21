@@ -1,4 +1,4 @@
-#Retrofit-spring-boot-starter-samples-retrofitbuilder
+# Retrofit-spring-boot-starter-samples-retrofitbuilder
 
 Inherit `BaseCallAdapterFactoryBuilder` to build a Retrofit `CallAdapter.Factory`
 
@@ -13,9 +13,21 @@ Inherit `BaseOkHttpClientBuilder` to build a Retrofit `OkHttpClient.Builder`
 Inherit `BaseInterceptor` to intercept a OkHttpClient `Interceptor`
 
 
+Backend Services API Responses JSON object , a `converter` that can parse JSON.
+
+```xml
+
+<dependency>
+    <groupId>com.squareup.retrofit2</groupId>
+    <artifactId>converter-gson</artifactId>
+    <version>2.9.0</version>
+</dependency>
+```
+
 If any builder or interceptor needs to inject spring managed objects, it needs to add @ component and @ Autowired
 
 ```java
+
 @Slf4j
 @Component
 public class MyRetrofitInterceptor extends BaseInterceptor {
@@ -34,6 +46,7 @@ public class MyRetrofitInterceptor extends BaseInterceptor {
     }
 }
 ```
+
 In general, refer to the following, It doesn't need to be managed by spring container
 
 ```java

@@ -1,0 +1,6 @@
+server:
+  port: 9094
+
+spring:
+  application:
+    name: quickstart

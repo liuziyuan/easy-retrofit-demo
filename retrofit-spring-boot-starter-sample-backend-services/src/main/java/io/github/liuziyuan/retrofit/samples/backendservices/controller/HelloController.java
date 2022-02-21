@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
@@ -17,13 +16,19 @@ import java.util.Random;
 @Slf4j
 @Api(tags = "Hello Api")
 @RestController
-@RequestMapping("/v1/hello")
 public class HelloController {
 
-    @GetMapping("/{message}")
+    @GetMapping("/v1/hello/{message}")
     public ResponseEntity<HelloBean> hello(@PathVariable String message) throws InterruptedException {
         HelloBean helloBean = new HelloBean();
-        helloBean.setMessage(message + new Random().nextInt());
+        helloBean.setMessage(message + new Random().nextInt() + "/v1");
+        return ResponseEntity.ok(helloBean);
+    }
+
+    @GetMapping("/hello/{message}")
+    public ResponseEntity<HelloBean> hello2(@PathVariable String message) throws InterruptedException {
+        HelloBean helloBean = new HelloBean();
+        helloBean.setMessage(message + new Random().nextInt() + "/");
         return ResponseEntity.ok(helloBean);
     }
 }
