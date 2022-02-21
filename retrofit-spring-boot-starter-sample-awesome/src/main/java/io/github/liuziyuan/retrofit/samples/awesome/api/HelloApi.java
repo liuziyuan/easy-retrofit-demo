@@ -25,4 +25,7 @@ public interface HelloApi {
 
     @GET("/hello/{message}")
     Call<ResponseBody> hello2(@Path("message") String message);
+
+    @GET("http://www.github.com/robots.txt")
+    Call<ResponseBody> robots();
 }

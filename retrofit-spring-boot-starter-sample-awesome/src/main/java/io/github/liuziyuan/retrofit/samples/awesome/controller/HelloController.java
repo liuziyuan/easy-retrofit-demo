@@ -31,7 +31,13 @@ public class HelloController {
 
     @GetMapping("/hello/{message}")
     public ResponseEntity<String> hello2(@PathVariable String message) throws IOException {
-        final ResponseBody body = helloApi.hello(message).execute().body();
+        final ResponseBody body = helloApi.hello2(message).execute().body();
+        return ResponseEntity.ok(body.string());
+    }
+
+    @GetMapping("/hello")
+    public ResponseEntity<String> hello3() throws IOException {
+        final ResponseBody body = helloApi.robots().execute().body();
         return ResponseEntity.ok(body.string());
     }
 }
