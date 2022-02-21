@@ -1,9 +1,9 @@
 package io.github.liuziyuan.retrofit.samples.quickstart.controller;
 
 import io.github.liuziyuan.retrofit.samples.quickstart.api.HelloApi;
-import io.github.liuziyuan.retrofit.samples.quickstart.domain.HelloBean;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +26,8 @@ public class HelloController {
     private HelloApi helloApi;
 
     @GetMapping("/{message}")
-    public ResponseEntity<HelloBean> hello(@PathVariable String message) throws IOException {
-        final HelloBean body = helloApi.hello(message).execute().body();
-        return ResponseEntity.ok(body);
+    public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
+        final ResponseBody body = helloApi.hello(message).execute().body();
+        return ResponseEntity.ok(body.string());
     }
 }

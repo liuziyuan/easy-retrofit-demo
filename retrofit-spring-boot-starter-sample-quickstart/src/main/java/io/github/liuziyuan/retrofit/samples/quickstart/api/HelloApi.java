@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.quickstart.api;
 
 import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.samples.quickstart.domain.HelloBean;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -12,7 +12,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:8080/", addConverterFactory = {GsonConvertFactoryBuilder.class})
+@RetrofitBuilder(baseUrl = "http://localhost:8080/")
 public interface HelloApi {
     /**
      * call hello API method of backend service
@@ -21,5 +21,5 @@ public interface HelloApi {
      * @return
      */
     @GET("v1/hello/{message}")
-    Call<HelloBean> hello(@Path("message") String message);
+    Call<ResponseBody> hello(@Path("message") String message);
 }

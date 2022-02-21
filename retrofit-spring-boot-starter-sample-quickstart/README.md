@@ -1,12 +1,7 @@
 #Quickstart Sample
-Backend Services API Responses JSON object ,so you need a `converter` that can parse JSON.
+By default, Retrofit uses the `ResponseBody` of OkHttp3 as the Response of the `Call` method
 
-```xml
-<dependency>
-    <groupId>com.squareup.retrofit2</groupId>
-    <artifactId>converter-gson</artifactId>
-    <version>2.9.0</version>
-</dependency>
-```
+If you want to parse JSON from the backend services, You can refer to the [retrofit-spring-boot-starter-sample-retrofitbuilder](https://github.com/liuziyuan/retrofit-spring-boot-starter-samples/tree/main/retrofit-spring-boot-starter-sample-retrofitbuilder) demo
+
 Swagger-UI URL: http://localhost:9090/swagger-ui/index.html
 
