@@ -49,7 +49,7 @@ app:
 
 The `@RetrofitBuilder` and `@RetrofitInterceptor` of these two Interfaces are exactly the same, so they will be merged into one Retrofit instance
 
-Only the prefix of the URL is different, that is, the difference between `/v1` and `v2`. In some cases, this kind of URL does appear in some back-end services.
+Only the prefix of the URL is different, that is, the difference between `/v1` and `v2`, and the HostURL is same `http://localhost:8080` . In some cases, this kind of URL does appear in some back-end services.
 
 In this example, you can find the only instance of Retrofit by injecting RetrofitResourceContext object
 
