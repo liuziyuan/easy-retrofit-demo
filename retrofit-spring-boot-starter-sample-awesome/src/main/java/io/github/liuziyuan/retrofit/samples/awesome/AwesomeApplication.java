@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.quickstart.api")
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.awesome.api")
 @SpringBootApplication
 public class AwesomeApplication {
     public static void main(String[] args) {
