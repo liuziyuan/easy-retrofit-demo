@@ -1,5 +1,7 @@
 # Retrofit-spring-boot-starter-samples-retrofitbuilder
 
+Swagger-UI URL: http://localhost:9091/swagger-ui/index.html
+
 Inherit `BaseCallAdapterFactoryBuilder` to build a Retrofit `CallAdapter.Factory`
 
 Inherit `BaseConverterFactoryBuilder` to build a Retrofit `Converter.Factory`
