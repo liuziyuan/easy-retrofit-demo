@@ -1,9 +1,12 @@
 package io.github.liuziyuan.retrofit.samples.awesome.api;
 
+import io.github.liuziyuan.retrofit.annotation.InterceptorType;
 import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.annotation.RetrofitInterceptor;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.Path;
 
 /**
@@ -13,6 +16,7 @@ import retrofit2.http.Path;
  * @author liuziyuan
  */
 @RetrofitBuilder(baseUrl = "http://localhost:8080/v1")
+@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 public interface HelloApi {
     /**
      * call hello API method of backend service
@@ -28,4 +32,14 @@ public interface HelloApi {
 
     @GET("http://www.github.com/robots.txt")
     Call<ResponseBody> robots();
+
+    @HTTP(method = "GET", path = "hello/{message}")
+    Call<ResponseBody> httpHello(@Path("message") String message);
+
+    @HTTP(method = "GET", path = "/hello/{message}")
+    Call<ResponseBody> httpHello2(@Path("message") String message);
+
+    @HTTP(method = "GET", path = "http://www.github.com/robots.txt")
+    Call<ResponseBody> httpRobots();
+
 }

@@ -26,18 +26,21 @@ public class HelloController {
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
         final ResponseBody body = helloApi.hello(message).execute().body();
-        return ResponseEntity.ok(body.string());
+        final ResponseBody body1 = helloApi.httpHello(message).execute().body();
+        return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
 
     @GetMapping("/hello/{message}")
     public ResponseEntity<String> hello2(@PathVariable String message) throws IOException {
         final ResponseBody body = helloApi.hello2(message).execute().body();
-        return ResponseEntity.ok(body.string());
+        final ResponseBody body1 = helloApi.httpHello2(message).execute().body();
+        return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
 
     @GetMapping("/hello")
     public ResponseEntity<String> hello3() throws IOException {
         final ResponseBody body = helloApi.robots().execute().body();
-        return ResponseEntity.ok(body.string());
+        final ResponseBody body1 = helloApi.httpRobots().execute().body();
+        return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
 }
