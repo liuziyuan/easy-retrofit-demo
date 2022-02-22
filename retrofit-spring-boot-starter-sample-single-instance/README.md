@@ -1,5 +1,7 @@
 #Retrofit-spring-boot-starter-samples-single-instance
 
+Swagger-UI URL: http://localhost:9093/swagger-ui/index.html
+
 When multiple retrofits have the same `@RetrofitBuilder` and only the prefix URLs in `baseUrl` are different, retrofit-spring-boot-starter will automatically merge multiple retrofit instances and keep only one instance. This instance will use a built-in interceptor to assemble the prefix of the URL for the baseURL
 
 ```java
