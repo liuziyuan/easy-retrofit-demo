@@ -4,3 +4,9 @@ server:
 spring:
   application:
     name: quickstart
+
+
+app:
+  url:
+    host: http://localhost:8080/
+    prefix: /v1

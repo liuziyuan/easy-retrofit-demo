@@ -3,6 +3,7 @@ package io.github.liuziyuan.retrofit.samples.awesome.api;
 import io.github.liuziyuan.retrofit.annotation.InterceptorType;
 import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.annotation.RetrofitInterceptor;
+import io.github.liuziyuan.retrofit.annotation.RetrofitUrlPrefix;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -15,8 +16,13 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:8080/v1")
+
+// use @RetrofitUrlPrefix
+@RetrofitBuilder(baseUrl = "${app.url.host}")
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
+@RetrofitUrlPrefix("${app.url.prefix}")
+//@RetrofitBuilder(baseUrl = "http://localhost:8080/v1/")
+//@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 public interface HelloApi {
     /**
      * call hello API method of backend service
