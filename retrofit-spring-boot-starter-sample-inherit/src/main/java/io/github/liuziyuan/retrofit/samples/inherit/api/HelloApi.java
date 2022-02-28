@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.inherit.api;
 
+import io.github.liuziyuan.retrofit.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.samples.inherit.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -13,7 +14,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-
+@RetrofitUrlPrefix("/v1/hello/")
 public interface HelloApi extends BaseApi {
     /**
      * call hello API method of backend service
@@ -21,6 +22,6 @@ public interface HelloApi extends BaseApi {
      * @param message message
      * @return
      */
-    @GET("v1/hello/{message}")
+    @GET("{message}")
     Call<HelloBean> hello(@Path("message") String message);
 }
