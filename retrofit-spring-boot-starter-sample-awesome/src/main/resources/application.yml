@@ -9,4 +9,12 @@ spring:
 app:
   url:
     host: http://localhost:8080/
+    host2: http://localhost:8081/
     prefix: /v1
+
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
+

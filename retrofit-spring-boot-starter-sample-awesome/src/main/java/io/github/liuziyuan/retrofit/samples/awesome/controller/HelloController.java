@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.awesome.controller;
 
+import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi;
 import io.github.liuziyuan.retrofit.samples.awesome.api.HelloApi;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
@@ -22,12 +23,22 @@ public class HelloController {
 
     @Autowired
     private HelloApi helloApi;
+    @Autowired
+    private DynamicInheritApi dynamicInheritApi;
 
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
         final ResponseBody body = helloApi.hello(message).execute().body();
         final ResponseBody body1 = helloApi.httpHello(message).execute().body();
         return ResponseEntity.ok(body.string() + "-" + body1.string());
+    }
+
+    @GetMapping("/v1/hello/8081/{message}")
+    public ResponseEntity<String> hello8081(@PathVariable String message) throws IOException {
+        final ResponseBody body = helloApi.hello(message).execute().body();
+        final ResponseBody body1 = dynamicInheritApi.hello(message).execute().body();
+        final ResponseBody body2 = helloApi.httpHello2(message).execute().body();
+        return ResponseEntity.ok(body.string() + "-" + body1.string() + "-" + body2.string());
     }
 
     @GetMapping("/hello/{message}")
@@ -43,4 +54,6 @@ public class HelloController {
         final ResponseBody body1 = helloApi.httpRobots().execute().body();
         return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
+
+
 }
