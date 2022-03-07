@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -30,5 +32,17 @@ public class HelloController {
         HelloBean helloBean = new HelloBean();
         helloBean.setMessage(message + new Random().nextInt() + "/");
         return ResponseEntity.ok(helloBean);
+    }
+
+    @GetMapping("/v1/hello2")
+    public ResponseEntity<List<HelloBean>> hello3() throws InterruptedException {
+        HelloBean helloBean = new HelloBean();
+        helloBean.setMessage(new Random().nextInt() + "/");
+        HelloBean helloBean2 = new HelloBean();
+        helloBean2.setMessage(new Random().nextInt() + "/");
+        List<HelloBean> list = new ArrayList<>();
+        list.add(helloBean);
+        list.add(helloBean2);
+        return ResponseEntity.ok(list);
     }
 }
