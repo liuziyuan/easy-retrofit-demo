@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RetrofitConfig {
     @Bean
-    public RetrofitResourceDefinitionRegistry retrofitResourceDefinitionRegistry() {
+    public static RetrofitResourceDefinitionRegistry retrofitResourceDefinitionRegistry() {
         return new RetrofitResourceDefinitionRegistry();
     }
 }
