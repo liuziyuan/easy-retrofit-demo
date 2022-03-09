@@ -68,3 +68,10 @@ public class HelloController {
     }
 }
 ```
+
+###* You can set `@RetrofitInterceptor` in any interface that inherits the parent interface, form v0.0.11
+
+### if you used multiple inheritance, The first Interface will take effect in the extends list, please don't use multiple inheritance
+
+
+

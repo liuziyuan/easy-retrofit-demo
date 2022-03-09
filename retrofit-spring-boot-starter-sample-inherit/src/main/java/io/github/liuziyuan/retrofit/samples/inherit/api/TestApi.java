@@ -8,7 +8,7 @@ import retrofit2.http.Path;
 /**
  * @author liuziyuan
  */
-public interface TestApi extends BaseApi {
+public interface TestApi extends MiddleApi, OtherApi {
 
     /**
      * call test API method of backend service

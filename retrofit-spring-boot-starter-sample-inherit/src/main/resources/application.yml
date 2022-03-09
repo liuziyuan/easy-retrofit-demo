@@ -8,3 +8,8 @@ spring:
 app:
   hello:
     url: http://localhost:8080/
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
