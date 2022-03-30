@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author liuziyuan
  */
-
+@EnableRetrofit
 @SpringBootApplication
 public class QuickStartApplication {
     public static void main(String[] args) {
