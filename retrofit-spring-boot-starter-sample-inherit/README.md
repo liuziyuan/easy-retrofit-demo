@@ -69,7 +69,21 @@ public class HelloController {
 }
 ```
 
-###* You can set `@RetrofitInterceptor` in any interface that inherits the parent interface, form v0.0.11
+###* You can set `@RetrofitBase` in any interface that inherits the parent interface, form v0.0.11
+```java
+@RetrofitBase(baseInterface = AnnotationApi2.class)
+public interface AnnotationApi3 {
+}
+
+@RetrofitBase(baseInterface = AnnotationApi1.class)
+public interface AnnotationApi2 {
+}
+
+@RetrofitBase(baseInterface = BaseApi.class)
+public interface AnnotationApi1 {
+}
+```
+the AnnotationApi1, AnnotationApi2 and AnnotationApi3 has same baseInterface, it is BaseApi
 
 ### if you used multiple inheritance, The first Interface will take effect in the extends list, please don't use multiple inheritance
 
