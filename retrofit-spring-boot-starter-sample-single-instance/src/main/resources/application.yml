@@ -11,3 +11,6 @@ app:
       url: http://localhost:8080/v1/
     v2:
       url: http://localhost:8080/v2/
+
+okhttpclient:
+  timeout: 30000
