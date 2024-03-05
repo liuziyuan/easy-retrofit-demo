@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9102
 
 spring:
   application:
@@ -7,4 +7,4 @@ spring:
 
 app:
   hello:
-    url: http://localhost:8080/
+    url: http://localhost:9100/

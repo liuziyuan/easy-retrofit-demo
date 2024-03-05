@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
 
-import io.github.liuziyuan.retrofit.extension.BaseCallBackExecutorBuilder;
+
+import io.github.liuziyuan.retrofit.core.builder.BaseCallBackExecutorBuilder;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.Executor;

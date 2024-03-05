@@ -1,6 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
 
-import io.github.liuziyuan.retrofit.extension.BaseInterceptor;
+import io.github.liuziyuan.retrofit.core.extension.BaseInterceptor;
 import lombok.SneakyThrows;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
