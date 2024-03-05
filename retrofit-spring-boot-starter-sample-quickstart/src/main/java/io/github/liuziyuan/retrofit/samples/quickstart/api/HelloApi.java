@@ -1,6 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.quickstart.api;
 
-import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
