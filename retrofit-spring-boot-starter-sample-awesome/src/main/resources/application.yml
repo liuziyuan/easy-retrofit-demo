@@ -1,5 +1,5 @@
 server:
-  port: 9094
+  port: 9105
 
 spring:
   application:
@@ -8,8 +8,8 @@ spring:
 
 app:
   url:
-    host: http://localhost:8080/
-    host2: http://localhost:8081/
+    host: http://localhost:9100/
+    host2: http://localhost:9100/
     prefix: /v1
 
 

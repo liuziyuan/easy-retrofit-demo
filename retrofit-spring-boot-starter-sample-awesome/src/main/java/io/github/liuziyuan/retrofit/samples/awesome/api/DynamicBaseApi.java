@@ -1,8 +1,9 @@
 package io.github.liuziyuan.retrofit.samples.awesome.api;
 
-import io.github.liuziyuan.retrofit.annotation.InterceptorType;
-import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.annotation.RetrofitInterceptor;
+
+import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 
 /**
  * @author liuziyuan

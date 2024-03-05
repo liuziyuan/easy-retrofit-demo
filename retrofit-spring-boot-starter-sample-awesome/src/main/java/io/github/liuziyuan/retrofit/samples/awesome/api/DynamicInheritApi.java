@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.awesome.api;
 
-import io.github.liuziyuan.retrofit.annotation.RetrofitDynamicBaseUrl;
-import io.github.liuziyuan.retrofit.annotation.RetrofitUrlPrefix;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitDynamicBaseUrl;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
