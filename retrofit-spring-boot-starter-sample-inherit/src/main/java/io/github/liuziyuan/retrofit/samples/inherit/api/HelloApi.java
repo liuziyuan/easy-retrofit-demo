@@ -1,6 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.inherit.api;
 
-import io.github.liuziyuan.retrofit.annotation.RetrofitUrlPrefix;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.samples.inherit.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;

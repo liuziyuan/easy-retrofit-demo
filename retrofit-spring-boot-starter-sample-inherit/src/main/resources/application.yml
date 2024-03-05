@@ -1,5 +1,5 @@
 server:
-  port: 9092
+  port: 9103
 
 spring:
   application:
@@ -7,7 +7,7 @@ spring:
 
 app:
   hello:
-    url: http://localhost:8080/
+    url: http://localhost:9100/
 
 logging:
   level:

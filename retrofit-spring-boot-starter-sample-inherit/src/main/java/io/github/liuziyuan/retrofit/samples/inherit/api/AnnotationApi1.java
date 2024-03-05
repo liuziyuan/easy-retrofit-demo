@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.inherit.api;
 
-import io.github.liuziyuan.retrofit.annotation.RetrofitBase;
+
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitBase;
 
 /**
  * @author liuziyuan

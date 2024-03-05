@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.inherit.api;
 
-import io.github.liuziyuan.retrofit.extension.BaseCallAdapterFactoryBuilder;
+
+import io.github.liuziyuan.retrofit.core.builder.BaseCallAdapterFactoryBuilder;
 import retrofit2.CallAdapter;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 

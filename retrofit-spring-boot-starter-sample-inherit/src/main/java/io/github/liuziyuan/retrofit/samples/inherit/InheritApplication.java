@@ -1,6 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.inherit;
 
-import io.github.liuziyuan.retrofit.annotation.EnableRetrofit;
+import io.github.liuziyuan.retrofit.springboot.EnableRetrofit;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
