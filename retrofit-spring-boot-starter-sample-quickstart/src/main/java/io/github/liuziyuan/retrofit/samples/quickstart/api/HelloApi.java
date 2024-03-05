@@ -12,7 +12,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:8080/")
+@RetrofitBuilder(baseUrl = "http://localhost:9100/")
 public interface HelloApi {
     /**
      * call hello API method of backend service
