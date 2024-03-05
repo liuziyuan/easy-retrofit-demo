@@ -1,8 +1,9 @@
 package io.github.liuziyuan.retrofit.samples.singleinstance.api;
 
-import io.github.liuziyuan.retrofit.RetrofitResourceContext;
-import io.github.liuziyuan.retrofit.extension.BaseInterceptor;
-import io.github.liuziyuan.retrofit.resource.RetrofitServiceBean;
+
+import io.github.liuziyuan.retrofit.core.RetrofitResourceContext;
+import io.github.liuziyuan.retrofit.core.extension.BaseInterceptor;
+import io.github.liuziyuan.retrofit.core.resource.RetrofitApiServiceBean;
 import io.github.liuziyuan.retrofit.samples.singleinstance.controller.HelloService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +40,7 @@ public class MyRetrofitInterceptor extends BaseInterceptor {
     protected Response executeIntercept(Chain chain) {
         Request request = chain.request();
         String clazzName = Objects.requireNonNull(request.tag(Invocation.class)).method().getDeclaringClass().getName();
-        final RetrofitServiceBean currentServiceBean = context.getRetrofitServiceBean(clazzName);
+        final RetrofitApiServiceBean currentServiceBean = context.getRetrofitApiServiceBean(clazzName);
         log.info("HelloService: {}", helloService.hello("retrofit"));
         log.info("time out: {}", timeout);
         // TODO if you need

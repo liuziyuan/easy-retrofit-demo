@@ -1,7 +1,8 @@
 package io.github.liuziyuan.retrofit.samples.singleinstance.api;
 
-import io.github.liuziyuan.retrofit.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.annotation.RetrofitInterceptor;
+
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.samples.singleinstance.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;
