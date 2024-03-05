@@ -1,0 +1,27 @@
+server:
+  port: 9106
+
+spring:
+  application:
+    name: global
+
+
+app:
+  url:
+    host: http://localhost:9100/
+    prefix: /v1
+
+okhttpclient:
+  timeout: 30000
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
+
+retrofit:
+  global:
+    enable: true
+    overwrite-type: global_first
+    converter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.GsonConvertFactoryBuilder
+    call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.RxJavaCallAdapterFactoryBuilder
