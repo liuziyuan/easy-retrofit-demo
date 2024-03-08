@@ -2,11 +2,9 @@ package io.github.liuziyuan.retrofit.spring.boot.web.samples.controller;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.api.HelloApi;
-import io.github.liuziyuan.retrofit.spring.boot.web.samples.api.HelloGlobalApi;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +25,6 @@ public class HelloController {
 
     @Autowired
     private HelloApi helloApi;
-    @Autowired
-    private HelloGlobalApi globalApi;
 
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<HelloBean> hello(@PathVariable String message) throws IOException {
@@ -48,12 +44,6 @@ public class HelloController {
         CompletableFuture<HelloBean> completableFuture = helloApi.hello3(message);
         HelloBean helloBean = completableFuture.get();
         return ResponseEntity.ok(helloBean);
-    }
-
-    @GetMapping("/v1/hello2/{message}")
-    public ResponseEntity<HelloBean> hello4(@PathVariable String message) throws IOException {
-        HelloBean hello = globalApi.hello(message);
-        return ResponseEntity.ok(hello);
     }
 
 

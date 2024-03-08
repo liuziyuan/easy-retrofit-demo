@@ -22,7 +22,7 @@ import java.util.concurrent.CompletableFuture;
  */
 
 // use @RetrofitUrlPrefix
-@RetrofitBuilder(baseUrl = "${app.url.host}", denyGlobalConfig = true)
+@RetrofitBuilder(baseUrl = "${app.url.host}")
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 @RetrofitUrlPrefix("${app.url.prefix}")
 public interface HelloApi {

@@ -17,11 +17,3 @@ logging:
   level:
     root: info
     io.github.liuziyuan: debug
-
-retrofit:
-  global:
-    enable: true
-    base-url: ${app.url.host2}
-    converter-factory-builder-clazz: io.github.liuziyuan.retrofit.spring.boot.web.JacksonConvertFactoryBuilder
-    call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.spring.boot.web.BodyCallAdapterFactoryBuilder
-
