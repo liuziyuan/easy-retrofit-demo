@@ -1,0 +1,19 @@
+server:
+  port: 9111
+
+spring:
+  application:
+    name: quickstart
+
+
+app:
+  url:
+    host: http://localhost:9100/
+    host2: http://localhost:9100/
+    prefix: /v1
+
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
