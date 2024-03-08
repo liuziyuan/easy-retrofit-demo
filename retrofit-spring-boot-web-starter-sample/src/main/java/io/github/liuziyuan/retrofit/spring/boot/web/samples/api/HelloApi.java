@@ -12,6 +12,8 @@ import retrofit2.http.GET;
 import retrofit2.http.HTTP;
 import retrofit2.http.Path;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * <p><b>Base URLs should always end in {@code /}.</b>
  * <p><b>Endpoint values which contain a leading {@code /} are absolute.</b>
@@ -34,4 +36,6 @@ public interface HelloApi {
     HelloBean hello(@Path("message") String message);
     @GET("hello/{message}")
     ListenableFuture<HelloBean> hello2(@Path("message") String message);
+    @GET("hello/{message}")
+    CompletableFuture<HelloBean> hello3(@Path("message") String message);
 }

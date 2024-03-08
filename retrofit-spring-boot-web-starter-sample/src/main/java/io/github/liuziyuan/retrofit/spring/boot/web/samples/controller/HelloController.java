@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -39,7 +40,12 @@ public class HelloController {
         return ResponseEntity.ok(helloBean);
     }
 
-
+    @GetMapping("/v3/hello/{message}")
+    public ResponseEntity<HelloBean> hello3(@PathVariable String message) throws IOException, ExecutionException, InterruptedException {
+        CompletableFuture<HelloBean> completableFuture = helloApi.hello3(message);
+        HelloBean helloBean = completableFuture.get();
+        return ResponseEntity.ok(helloBean);
+    }
 
 
 }
