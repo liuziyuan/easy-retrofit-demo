@@ -19,7 +19,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <retrofit.version>1.0.0</retrofit.version>
+        <retrofit-web.version>1.0.0</retrofit-web.version>
     </properties>
 
     <dependencies>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>retrofit-spring-boot-web-starter</artifactId>
-            <version>1.0.0</version>
+            <version>${retrofit-web.version}</version>
         </dependency>
 
         <!--lombok-->
