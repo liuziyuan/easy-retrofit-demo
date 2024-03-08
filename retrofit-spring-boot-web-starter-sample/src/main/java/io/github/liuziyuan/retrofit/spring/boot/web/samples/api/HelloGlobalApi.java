@@ -6,10 +6,7 @@ import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.HTTP;
 import retrofit2.http.Path;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,10 +19,10 @@ import java.util.concurrent.CompletableFuture;
  */
 
 // use @RetrofitUrlPrefix
-@RetrofitBuilder(baseUrl = "${app.url.host}", denyGlobalConfig = true)
+@RetrofitBuilder()
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 @RetrofitUrlPrefix("${app.url.prefix}")
-public interface HelloApi {
+public interface HelloGlobalApi {
     /**
      * call hello API method of backend service
      *
@@ -35,9 +32,4 @@ public interface HelloApi {
     @GET("hello/{message}")
     HelloBean hello(@Path("message") String message);
 
-    @GET("hello/{message}")
-    ListenableFuture<HelloBean> hello2(@Path("message") String message);
-
-    @GET("hello/{message}")
-    CompletableFuture<HelloBean> hello3(@Path("message") String message);
 }
