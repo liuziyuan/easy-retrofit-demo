@@ -1,5 +1,5 @@
 server:
-  port: 9105
+  port: 9110
 
 spring:
   application:
