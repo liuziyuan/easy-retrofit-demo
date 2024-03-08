@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <artifactId>retrofit-spring-boot-starter-sample-global-config</artifactId>
+    <artifactId>retrofit-spring-boot-web-starter-sample</artifactId>
     <groupId>io.github.liuziyuan</groupId>
     <version>1.0-SNAPSHOT</version>
 
@@ -23,22 +23,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>converter-gson</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>adapter-rxjava</artifactId>
-            <version>2.9.0</version>
-        </dependency>
 
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-spring-boot-starter</artifactId>
-            <version>${retrofit.version}</version>
+            <artifactId>retrofit-spring-boot-web-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <!--lombok-->
@@ -60,12 +49,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-configuration-processor</artifactId>-->
-<!--            <optional>true</optional>-->
-<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -96,7 +79,9 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
