@@ -19,7 +19,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <retrofit-web.version>1.0.0</retrofit-web.version>
+        <retrofit-web.version>1.1.0</retrofit-web.version>
     </properties>
 
     <dependencies>
