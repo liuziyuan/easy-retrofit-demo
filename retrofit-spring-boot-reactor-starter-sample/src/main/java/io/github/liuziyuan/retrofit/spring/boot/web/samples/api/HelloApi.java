@@ -6,6 +6,7 @@ import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
+import io.reactivex.rxjava3.core.Observable;
 import okhttp3.ResponseBody;
 import reactor.core.publisher.Mono;
 import retrofit2.Call;
@@ -36,4 +37,6 @@ public interface HelloApi {
     @GET("hello/{message}")
     Mono<HelloBean> hello(@Path("message") String message);
 
+    @GET("hello/{message}")
+    Observable<HelloBean> hello2(@Path("message") String message);
 }

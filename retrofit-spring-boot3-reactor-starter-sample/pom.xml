@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <artifactId>retrofit-spring-boot-web-starter-sample</artifactId>
+    <artifactId>retrofit-spring-boot3-reactor-starter-sample</artifactId>
     <groupId>io.github.liuziyuan</groupId>
     <version>1.0-SNAPSHOT</version>
 
@@ -12,21 +12,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
+        <version>3.2.3</version>
         <relativePath/>
     </parent>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <retrofit-web.version>1.2.0</retrofit-web.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <retrofit-web.version>1.2.0-jdk17</retrofit-web.version>
     </properties>
 
     <dependencies>
 
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-spring-boot-web-starter</artifactId>
+            <artifactId>retrofit-spring-boot-reactor-starter</artifactId>
             <version>${retrofit-web.version}</version>
         </dependency>
 
@@ -41,30 +41,9 @@
         <!--spring boot components-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
 
         <!--spring boot components-->
 

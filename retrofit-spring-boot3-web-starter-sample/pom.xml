@@ -19,7 +19,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <retrofit-web.version>1.1.1-jdk17</retrofit-web.version>
+        <retrofit-web.version>1.2.0-jdk17</retrofit-web.version>
     </properties>
 
     <dependencies>

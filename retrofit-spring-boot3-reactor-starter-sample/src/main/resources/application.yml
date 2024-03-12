@@ -1,0 +1,27 @@
+server:
+  port: 9110
+
+spring:
+  application:
+    name: quickstart
+
+
+app:
+  url:
+    host: http://localhost:9100/
+    host2: http://localhost:9100/
+    prefix: /v1
+
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
+
+# You can observe the impact of global configuration on the final value of retrofitbuilder through different configurations，Please do not expand the current configuration when using the demo normally, as it may affect some functions
+# 你可以通过不同的配置，观测全局配置对RetrofitBuilder最终值的影响。正常使用demo，请不要展开当前配置，否则会影响部分功能
+#retrofit:
+#  global:
+#    enable: true
+#    call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.spring.boot.web.BodyCallAdapterFactoryBuilder
+#    overwrite-type: local_first
