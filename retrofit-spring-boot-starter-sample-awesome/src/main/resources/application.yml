@@ -8,9 +8,9 @@ spring:
 
 app:
   url:
-    host: http://localhost:9100/
-    host2: http://localhost:9100/
-    prefix: /v1
+    host: http://localhost:9105/
+    host2: http://localhost:9105/
+    prefix: /backend/v1
 
 
 logging:
