@@ -14,7 +14,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitUrlPrefix("/v1/hello/")
+@RetrofitUrlPrefix("backend/v1/hello/")
 public interface HelloApi extends MiddleApi {
     /**
      * call hello API method of backend service

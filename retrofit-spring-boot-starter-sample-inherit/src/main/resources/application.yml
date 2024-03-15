@@ -7,7 +7,7 @@ spring:
 
 app:
   hello:
-    url: http://localhost:9100/
+    url: http://localhost:9103/
 
 logging:
   level:

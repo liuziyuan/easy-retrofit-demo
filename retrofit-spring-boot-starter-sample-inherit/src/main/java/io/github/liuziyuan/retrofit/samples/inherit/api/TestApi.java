@@ -16,6 +16,6 @@ public interface TestApi extends MiddleApi, OtherApi {
      * @param message message
      * @return
      */
-    @GET("v1/test/{message}")
+    @GET("backend/v1/hello/{message}")
     Call<HelloBean> hello(@Path("message") String message);
 }
