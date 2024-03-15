@@ -39,6 +39,4 @@ public interface HelloApi {
     @GET("hello/{message}")
     Observable<HelloBean> hello2(@Path("message") String message);
 
-    @GET("hello/{message}")
-    Mono<HelloBean> hello3(@Path("message") String message);
 }

@@ -32,10 +32,4 @@ public class HelloController {
         return Mono.from(observable.toFlowable(BackpressureStrategy.BUFFER));
     }
 
-    @GetMapping("/v3/hello/{message}")
-    public Mono<HelloBean> hello3(@PathVariable String message) throws IOException {
-        return helloApi.hello3(message);
-    }
-
-
 }
