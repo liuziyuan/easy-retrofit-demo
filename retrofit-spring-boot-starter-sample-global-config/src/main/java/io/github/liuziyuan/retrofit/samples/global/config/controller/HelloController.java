@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.global.config.controller;
 
 import io.github.liuziyuan.retrofit.samples.global.config.api.HelloApi;
-import io.github.liuziyuan.retrofit.samples.global.config.api.HelloBean;
+import io.github.liuziyuan.retrofit.samples.global.config.domain.HelloBean;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

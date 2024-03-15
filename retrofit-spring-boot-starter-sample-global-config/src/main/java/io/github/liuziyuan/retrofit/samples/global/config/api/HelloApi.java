@@ -4,6 +4,7 @@ import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
+import io.github.liuziyuan.retrofit.samples.global.config.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

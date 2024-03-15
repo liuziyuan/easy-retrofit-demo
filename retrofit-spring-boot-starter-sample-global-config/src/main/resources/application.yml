@@ -8,8 +8,8 @@ spring:
 
 app:
   url:
-    host: http://localhost:9100/
-    prefix: /v1
+    host: http://localhost:9106/
+    prefix: /backend/v1
 
 okhttpclient:
   timeout: 30000
