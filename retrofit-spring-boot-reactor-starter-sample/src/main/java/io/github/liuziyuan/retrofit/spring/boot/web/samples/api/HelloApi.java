@@ -25,7 +25,6 @@ import java.util.concurrent.CompletableFuture;
 
 // use @RetrofitUrlPrefix
 @RetrofitBuilder(baseUrl = "${app.url.host}")
-@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 @RetrofitUrlPrefix("${app.url.prefix}")
 public interface HelloApi {
     /**
@@ -39,4 +38,7 @@ public interface HelloApi {
 
     @GET("hello/{message}")
     Observable<HelloBean> hello2(@Path("message") String message);
+
+    @GET("hello/{message}")
+    Mono<HelloBean> hello3(@Path("message") String message);
 }
