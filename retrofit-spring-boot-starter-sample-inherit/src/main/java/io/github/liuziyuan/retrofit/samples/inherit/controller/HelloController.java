@@ -3,7 +3,7 @@ package io.github.liuziyuan.retrofit.samples.inherit.controller;
 import io.github.liuziyuan.retrofit.samples.inherit.api.HelloApi;
 import io.github.liuziyuan.retrofit.samples.inherit.api.TestApi;
 import io.github.liuziyuan.retrofit.samples.inherit.domain.HelloBean;
-import io.swagger.annotations.Api;
+//import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import java.io.IOException;
  * @author liuziyuan
  */
 @Slf4j
-@Api(tags = "Hello Api")
+//@Api(tags = "Hello Api")
 @RestController
 @RequestMapping("/v1/hello")
 public class HelloController {

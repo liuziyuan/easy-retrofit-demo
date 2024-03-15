@@ -7,4 +7,4 @@ spring:
 
 app:
   hello:
-    url: http://localhost:9100/
+    url: http://localhost:9102/

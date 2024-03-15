@@ -12,7 +12,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:9100/")
+@RetrofitBuilder(baseUrl = "http://localhost:9101/", denyGlobalConfig = true)
 public interface HelloApi {
     /**
      * call hello API method of backend service
@@ -20,6 +20,6 @@ public interface HelloApi {
      * @param message message
      * @return
      */
-    @GET("v1/hello/{message}")
+    @GET("backend/v1/hello/{message}")
     Call<ResponseBody> hello(@Path("message") String message);
 }

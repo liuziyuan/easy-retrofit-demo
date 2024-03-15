@@ -9,6 +9,6 @@ import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
  * @author liuziyuan
  */
 @RetrofitBuilder(baseUrl = "${app.hello.url}")
-@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
+//@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 public interface OtherApi {
 }

@@ -1,8 +1,6 @@
-package io.github.liuziyuan.retrofit.samples.backendservices.controller;
+package io.github.liuziyuan.retrofit.spring.boot.web.samples.controller;
 
-import io.github.liuziyuan.retrofit.samples.backendservices.domain.HelloBean;
-import io.swagger.annotations.Api;
-import lombok.extern.slf4j.Slf4j;
+import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,16 +12,14 @@ import java.util.Random;
 /**
  * @author liuziyuan
  */
-@Slf4j
-@Api(tags = "Hello Api2")
 @RestController
-@RequestMapping("/v2/hello")
-public class HelloControllerV2 {
-
+@RequestMapping("/backend/v1/hello")
+public class BackendController {
     @GetMapping("/{message}")
     public ResponseEntity<HelloBean> hello(@PathVariable String message) {
         HelloBean helloBean = new HelloBean();
         helloBean.setMessage(message + new Random().nextInt());
         return ResponseEntity.ok(helloBean);
     }
+
 }

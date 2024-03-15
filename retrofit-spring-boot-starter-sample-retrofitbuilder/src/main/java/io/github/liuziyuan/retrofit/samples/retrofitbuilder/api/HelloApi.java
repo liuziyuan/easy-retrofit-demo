@@ -21,7 +21,6 @@ import retrofit2.http.Path;
         callbackExecutor = CallBackExecutorBuilder.class,
         client = OkHttpClientBuilder.class,
         validateEagerly = "0")
-@RetrofitInterceptor(handler = LoggingInterceptor.class)
 @RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
 public interface HelloApi {
     /**
@@ -30,6 +29,6 @@ public interface HelloApi {
      * @param message message
      * @return
      */
-    @GET("v1/hello/{message}")
+    @GET("backend/v1/hello/{message}")
     Call<HelloBean> hello(@Path("message") String message);
 }

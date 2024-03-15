@@ -12,7 +12,6 @@ import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 @RetrofitBuilder(baseUrl = "${app.hello.url}",
         addConverterFactory = {GsonConvertFactoryBuilder.class},
         client = OkHttpClientBuilder.class)
-@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 @RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
 public interface BaseApi {
 }
