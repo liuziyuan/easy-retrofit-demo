@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.global.config.api;
 
+import io.github.liuziyuan.retrofit.core.OverrideRule;
 import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
@@ -17,7 +18,7 @@ import retrofit2.http.Path;
  */
 
 // use @RetrofitUrlPrefix
-@RetrofitBuilder(baseUrl = "${app.url.host}")
+@RetrofitBuilder(baseUrl = "${app.url.host}", globalOverwriteRule = OverrideRule.GLOBAL_FIRST)
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 @RetrofitUrlPrefix("${app.url.prefix}")
 public interface HelloApi {

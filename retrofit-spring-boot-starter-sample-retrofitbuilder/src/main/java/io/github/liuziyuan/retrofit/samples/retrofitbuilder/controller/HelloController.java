@@ -5,10 +5,8 @@ import io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain.HelloBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import rx.Observable;
 
 import java.io.IOException;
 
@@ -27,5 +25,11 @@ public class HelloController {
     public ResponseEntity<HelloBean> hello(@PathVariable String message) throws IOException {
         final HelloBean body = helloApi.hello(message).execute().body();
         return ResponseEntity.ok(body);
+    }
+
+    @PostMapping("")
+    public ResponseEntity<HelloBean> helloPost(@RequestBody HelloBean message) throws IOException {
+        Observable<HelloBean> helloBeanObservable = helloApi.helloObservable(message);
+        return ResponseEntity.ok(helloBeanObservable.toBlocking().first());
     }
 }

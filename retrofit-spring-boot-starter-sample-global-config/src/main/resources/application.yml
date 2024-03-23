@@ -21,7 +21,6 @@ logging:
 
 retrofit:
   global:
-    enable: true
-    overwrite-type: global_first
     converter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.GsonConvertFactoryBuilder
     call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.RxJavaCallAdapterFactoryBuilder
+    enable: true

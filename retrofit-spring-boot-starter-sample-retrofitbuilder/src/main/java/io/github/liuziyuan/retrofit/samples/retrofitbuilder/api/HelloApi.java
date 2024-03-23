@@ -1,11 +1,15 @@
 package io.github.liuziyuan.retrofit.samples.retrofitbuilder.api;
 
+import io.github.liuziyuan.retrofit.core.OverrideRule;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.samples.retrofitbuilder.domain.HelloBean;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
+import rx.Observable;
 
 /**
  * <p><b>Base URLs should always end in {@code /}.</b>
@@ -20,7 +24,8 @@ import retrofit2.http.Path;
         addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class},
         callbackExecutor = CallBackExecutorBuilder.class,
         client = OkHttpClientBuilder.class,
-        validateEagerly = "0")
+        validateEagerly = false,
+        globalOverwriteRule = OverrideRule.LOCAL_FIRST)
 @RetrofitInterceptor(handler = MyRetrofitInterceptor.class)
 public interface HelloApi {
     /**
@@ -31,4 +36,7 @@ public interface HelloApi {
      */
     @GET("backend/v1/hello/{message}")
     Call<HelloBean> hello(@Path("message") String message);
+
+    @POST("backend/v1/hello")
+    Observable<HelloBean> helloObservable(@Body HelloBean message);
 }

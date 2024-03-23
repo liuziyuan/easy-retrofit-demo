@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.quickstart.api;
 
+import io.github.liuziyuan.retrofit.core.OverrideRule;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -12,7 +13,7 @@ import retrofit2.http.Path;
  *
  * @author liuziyuan
  */
-@RetrofitBuilder(baseUrl = "http://localhost:9101/", denyGlobalConfig = true)
+@RetrofitBuilder(baseUrl = "http://localhost:9101/")
 public interface HelloApi {
     /**
      * call hello API method of backend service

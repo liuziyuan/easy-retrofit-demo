@@ -10,6 +10,6 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 public class RxJavaCallAdapterFactoryBuilder extends BaseCallAdapterFactoryBuilder {
     @Override
     public CallAdapter.Factory buildCallAdapterFactory() {
-        return RxJavaCallAdapterFactory.create();
+        return RxJavaCallAdapterFactory.createAsync();
     }
 }
