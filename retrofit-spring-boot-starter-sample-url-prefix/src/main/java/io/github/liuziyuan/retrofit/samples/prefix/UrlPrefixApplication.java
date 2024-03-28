@@ -1,7 +1,7 @@
-package io.github.liuziyuan.retrofit.samples.quickstart;
-
+package io.github.liuziyuan.retrofit.samples.prefix;
 
 import io.github.liuziyuan.retrofit.spring.boot.EnableRetrofit;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -10,11 +10,11 @@ import org.springframework.core.env.ConfigurableEnvironment;
 /**
  * @author liuziyuan
  */
-
-@EnableRetrofit
+@Slf4j
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.url.prefix.api")
 @SpringBootApplication
-public class QuickStartApplication {
+public class UrlPrefixApplication {
     public static void main(String[] args) {
-        SpringApplication.run(QuickStartApplication.class, args);
+        SpringApplication.run(UrlPrefixApplication.class, args);
     }
 }

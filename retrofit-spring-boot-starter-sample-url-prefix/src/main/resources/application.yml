@@ -1,9 +1,9 @@
 server:
-  port: 9105
+  port: 9103
 
 spring:
   application:
-    name: inherit
+    name: url-prefix
 
 app:
   hello:

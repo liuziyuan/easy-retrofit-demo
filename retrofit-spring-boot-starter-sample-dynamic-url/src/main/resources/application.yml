@@ -1,0 +1,20 @@
+server:
+  port: 9107
+
+spring:
+  application:
+    name: dynamic-url
+
+
+app:
+  url:
+    host: http://localhost:9100/
+    host2: http://localhost:9100/
+    prefix: /backend/v1
+
+
+logging:
+  level:
+    root: info
+    io.github.liuziyuan: debug
+
