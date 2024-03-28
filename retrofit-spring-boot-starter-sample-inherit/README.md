@@ -1,6 +1,13 @@
 #Retrofit-spring-boot-starter-samples-inherit
 
-Swagger-UI URL: http://localhost:9092/swagger-ui/index.html
+## How to run
+1. Start backend service
+2. Start current project
+3. run `curl` command on terminal
+
+``` shell
+curl http://localhost:9105/v1/hello/abc 
+```
 
 ### If you have hundreds of APIs and these APIs have the same HostURL, you certainly don't want to put all APIs in the same Interface file, so you can create a BaseAPI Interface to create a retrofit instance, and other interface files inherit the BaseAPI.
 

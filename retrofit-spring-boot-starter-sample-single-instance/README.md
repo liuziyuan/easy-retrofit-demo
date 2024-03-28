@@ -1,5 +1,16 @@
 #Retrofit-spring-boot-starter-samples-single-instance
 
+## How to run
+1. Start backend service
+2. Start current project
+3. run `curl` command on terminal
+
+``` shell
+curl http://localhost:9104/v1/hello/abc 
+```
+
+
+
 When multiple retrofits have the same `@RetrofitBuilder` and only the prefix URLs in `baseUrl` are different, retrofit-spring-boot-starter will automatically merge multiple retrofit instances and keep only one instance. This instance will use a built-in interceptor to assemble the prefix of the URL for the baseURL
 
 ```java
