@@ -11,7 +11,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * @author liuziyuan
  */
 @Slf4j
-@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.url.prefix.api")
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.prefix.api")
 @SpringBootApplication
 public class UrlPrefixApplication {
     public static void main(String[] args) {
