@@ -2,10 +2,7 @@ package io.github.liuziyuan.retrofit.samples.backend.controller;
 
 import io.github.liuziyuan.retrofit.samples.backend.domain.HelloBean;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
 
@@ -14,9 +11,23 @@ import java.util.Random;
 public class HelloController {
 
     @GetMapping("/{message}")
-    public ResponseEntity<HelloBean> hello(@PathVariable String message) {
+    public ResponseEntity<HelloBean> helloPath(@PathVariable String message) {
         HelloBean helloBean = new HelloBean();
         helloBean.setMessage(message + new Random().nextInt());
         return ResponseEntity.ok(helloBean);
     }
+
+    @GetMapping("")
+    public ResponseEntity<HelloBean> helloParam(@RequestParam String message) {
+        HelloBean helloBean = new HelloBean();
+        helloBean.setMessage(message + new Random().nextInt());
+        return ResponseEntity.ok(helloBean);
+    }
+
+    @PostMapping("")
+    public ResponseEntity<HelloBean> helloBody(@RequestBody HelloBean helloBean) {
+        helloBean.setMessage(helloBean.getMessage() + new Random().nextInt());
+        return ResponseEntity.ok(helloBean);
+    }
+
 }
