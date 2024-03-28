@@ -17,7 +17,6 @@ import java.io.IOException;
  * @author liuziyuan
  */
 @Slf4j
-@Api(tags = "Hello Api")
 @RestController
 @RequestMapping("/v1/hello")
 public class HelloController {

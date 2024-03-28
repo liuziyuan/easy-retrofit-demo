@@ -2,7 +2,6 @@ package io.github.liuziyuan.retrofit.samples.awesome.controller;
 
 import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi;
 import io.github.liuziyuan.retrofit.samples.awesome.api.HelloApi;
-import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import java.io.IOException;
  * @author liuziyuan
  */
 @Slf4j
-@Api(tags = "Hello Api")
 @RestController
 public class HelloController {
 
