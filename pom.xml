@@ -27,6 +27,8 @@
         <module>retrofit-spring-boot-starter-sample-inherit</module>
         <module>retrofit-spring-boot-starter-sample-single-instance</module>
         <module>retrofit-spring-boot-starter-sample-global-config</module>
+        <module>retrofit-spring-boot-starter-sample-dynamic-url</module>
+        <module>retrofit-spring-boot-starter-sample-url-prefix</module>
     </modules>
 
     <properties>
