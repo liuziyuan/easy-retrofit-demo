@@ -7,7 +7,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <!-- 替换为你要使用的 Spring Boot 版本 -->
-        <version>2.3.12.RELEASE</version>
+        <version>2.7.18</version>
     </parent>
 
     <groupId>io.github.liuziyuan</groupId>

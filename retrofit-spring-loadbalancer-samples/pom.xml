@@ -24,6 +24,16 @@
         <retrofit-spring-loadbalancer.version>1.0.0</retrofit-spring-loadbalancer.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.7.18</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <modules>
         <module>retrofit-spring-loadbalancer-backend-service</module>
