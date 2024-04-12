@@ -8,7 +8,7 @@ The request of HelloController will call itself BackendController
 curl http://localhost:9110/v1/hello/abc
 ```
 
-2. Guava CompletableFuture type
+2. Guava ListenableFuture type
 ```shell
 curl http://localhost:9110/v2/hello/abc
 ```
