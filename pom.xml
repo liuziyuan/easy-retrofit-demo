@@ -31,6 +31,7 @@
         <module>retrofit-spring-boot-starter-sample-url-prefix</module>
         <module>retrofit-spring-boot-web-starter-sample</module>
         <module>retrofit-spring-boot-reactor-starter-sample</module>
+        <module>retrofit-spring-loadbalancer-samples</module>
     </modules>
 
     <properties>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>io.github.liuziyuan</groupId>
+        <artifactId>retrofit-demo-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>retrofit-spring-loadbalancer-samples</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring-cloud.version>2021.0.9</spring-cloud.version>
+        <retrofit-spring-web.version>1.3.0</retrofit-spring-web.version>
+        <retrofit-spring-reactor.version>1.3.0</retrofit-spring-reactor.version>
+        <retrofit-spring-loadbalancer.version>1.0.0</retrofit-spring-loadbalancer.version>
+    </properties>
+
+
+    <modules>
+        <module>retrofit-spring-loadbalancer-backend-service</module>
+        <module>retrofit-spring-loadbalancer-web-service</module>
+        <module>retrofit-spring-loadbalancer-reactor-service</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.10</version>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
