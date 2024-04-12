@@ -29,6 +29,8 @@
         <module>retrofit-spring-boot-starter-sample-global-config</module>
         <module>retrofit-spring-boot-starter-sample-dynamic-url</module>
         <module>retrofit-spring-boot-starter-sample-url-prefix</module>
+        <module>retrofit-spring-boot-web-starter-sample</module>
+        <module>retrofit-spring-boot-reactor-starter-sample</module>
     </modules>
 
     <properties>
