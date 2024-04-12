@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableRetrofit("io.github.liuziyuan.retrofit.spring.cloud.web.service")
+@EnableRetrofit("io.github.liuziyuan.retrofit.spring.loadbalancer.web.service")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class LoadBalancerWebApplication {
