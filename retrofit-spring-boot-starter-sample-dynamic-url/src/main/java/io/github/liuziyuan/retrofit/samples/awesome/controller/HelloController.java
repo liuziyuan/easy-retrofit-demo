@@ -27,7 +27,7 @@ public class HelloController {
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
         final ResponseBody body = helloApi.hello(message).execute().body();
-        final ResponseBody body1 = helloApi.httpHello(message).execute().body();
+        final ResponseBody body1 = dynamicInheritApi.hello(message).execute().body();
         return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
 

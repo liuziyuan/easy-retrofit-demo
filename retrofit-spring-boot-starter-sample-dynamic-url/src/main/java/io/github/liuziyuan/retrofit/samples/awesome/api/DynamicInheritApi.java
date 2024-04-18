@@ -10,7 +10,7 @@ import retrofit2.http.Path;
 /**
  * @author liuziyuan
  */
-@RetrofitDynamicBaseUrl("${app.url.host2}")
+@RetrofitDynamicBaseUrl("${app.url.host-dynamic}")
 @RetrofitUrlPrefix("${app.url.prefix}")
 public interface DynamicInheritApi extends DynamicBaseApi {
 

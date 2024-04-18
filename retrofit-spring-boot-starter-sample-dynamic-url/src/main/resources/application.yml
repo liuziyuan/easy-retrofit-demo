@@ -9,7 +9,7 @@ spring:
 app:
   url:
     host: http://localhost:9100/
-    host2: http://localhost:9200/
+    host-dynamic: http://localhost:9200/
     prefix: /backend/v1
 
 
