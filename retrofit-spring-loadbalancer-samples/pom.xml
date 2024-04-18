@@ -19,9 +19,6 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <spring-cloud.version>2021.0.9</spring-cloud.version>
-        <retrofit-spring-web.version>1.3.0</retrofit-spring-web.version>
-        <retrofit-spring-reactor.version>1.3.0</retrofit-spring-reactor.version>
-        <retrofit-spring-loadbalancer.version>1.0.0</retrofit-spring-loadbalancer.version>
     </properties>
 
     <dependencyManagement>

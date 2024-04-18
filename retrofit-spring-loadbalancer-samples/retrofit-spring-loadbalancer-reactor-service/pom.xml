@@ -29,12 +29,12 @@
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>retrofit-spring-boot-reactor-starter</artifactId>
-            <version>${retrofit-spring-reactor.version}</version>
+            <version>${retrofit.spring.boot.reactor.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>retrofit-extension-loadbalancer-spring-cloud-starter</artifactId>
-            <version>${retrofit-spring-loadbalancer.version}</version>
+            <version>${retrofit.spring.boot.loadbalancer.version}</version>
         </dependency>
 
         <dependency>
