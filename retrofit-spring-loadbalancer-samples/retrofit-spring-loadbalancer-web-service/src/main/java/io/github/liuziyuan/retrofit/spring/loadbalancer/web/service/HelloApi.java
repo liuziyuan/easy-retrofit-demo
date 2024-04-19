@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.spring.loadbalancer.web.service;
 
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
+import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptorParam;
 import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.extension.spring.cloud.loadbalancer.RetrofitLoadBalancer;
 import retrofit2.Call;
@@ -9,7 +10,7 @@ import retrofit2.http.Path;
 
 @RetrofitBuilder(baseUrl = "${app.url.host}")
 @RetrofitUrlPrefix("${app.url.prefix}")
-@RetrofitLoadBalancer(name = "${app.cloud.name}")
+@RetrofitLoadBalancer(name = "${app.cloud.name}", extensions = @RetrofitInterceptorParam(sort = 10))
 public interface HelloApi {
 
     @GET("hello/{message}")

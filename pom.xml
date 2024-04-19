@@ -42,11 +42,11 @@
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <retrofit.spring.boot.version>1.3.4</retrofit.spring.boot.version>
-        <retrofit.spring.boot.reactor.version>1.4.0</retrofit.spring.boot.reactor.version>
-        <retrofit.spring.boot.web.version>1.4.0</retrofit.spring.boot.web.version>
-        <retrofit.spring.boot.loadbalancer.version>1.1.0</retrofit.spring.boot.loadbalancer.version>
-        <retrofit.spring.boot.sentinel.version>1.1.0</retrofit.spring.boot.sentinel.version>
+        <retrofit.spring.boot.version>1.3.5</retrofit.spring.boot.version>
+        <retrofit.spring.boot.reactor.version>1.4.1</retrofit.spring.boot.reactor.version>
+        <retrofit.spring.boot.web.version>1.4.1</retrofit.spring.boot.web.version>
+        <retrofit.spring.boot.loadbalancer.version>1.1.1</retrofit.spring.boot.loadbalancer.version>
+        <retrofit.spring.boot.sentinel.version>1.1.1</retrofit.spring.boot.sentinel.version>
     </properties>
 
     <dependencyManagement>
