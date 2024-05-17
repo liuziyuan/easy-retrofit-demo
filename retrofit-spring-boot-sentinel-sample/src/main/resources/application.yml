@@ -1,4 +1,4 @@
-spring.application.name: okhttp-sentinal
+spring.application.name: okhttp-sentinel
 server.port: 9300
 
 logging:

@@ -35,9 +35,15 @@ public interface HelloApi {
     @GET("hello/{message}")
     HelloBean hello(@Path("message") String message);
 
+    @GET("hello/error/{message}")
+    HelloBean hello5(@Path("message") String message);
+
     @GET("hello/{message}")
     ListenableFuture<HelloBean> hello2(@Path("message") String message);
 
     @GET("hello/{message}")
     CompletableFuture<HelloBean> hello3(@Path("message") String message);
+
+    @GET("hello")
+    String hello4(@Path("message") String message);
 }

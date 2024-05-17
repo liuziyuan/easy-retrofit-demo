@@ -22,4 +22,13 @@ public class BackendController {
         return ResponseEntity.ok(helloBean);
     }
 
+    @GetMapping("/error/{message}")
+    public ResponseEntity<HelloBean> helloError(@PathVariable String message) {
+        throw new RuntimeException("error");
+    }
+
+    @GetMapping("")
+    public ResponseEntity<String> hello2(@PathVariable String message) {
+        return ResponseEntity.ok(message);
+    }
 }

@@ -17,3 +17,7 @@ curl http://localhost:9110/v2/hello/abc
 ```shell
 curl http://localhost:9110/v3/hello/abc
 ```
+1. String type
+```shell
+curl http://localhost:9110/v4/hello/abc
+```

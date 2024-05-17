@@ -43,5 +43,16 @@ public class HelloController {
         return ResponseEntity.ok(helloBean);
     }
 
+    @GetMapping("/v4/hello/{message}")
+    public ResponseEntity<String> hello4(@PathVariable String message) throws IOException {
+        String string = helloApi.hello4(message);
+        return ResponseEntity.ok(string);
+    }
+
+    @GetMapping("/v5/hello/{message}")
+    public ResponseEntity<HelloBean> helloError(@PathVariable String message) throws IOException {
+        HelloBean hello = helloApi.hello5(message);
+        return ResponseEntity.ok(hello);
+    }
 
 }
