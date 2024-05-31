@@ -1,8 +1,7 @@
 package io.github.liuziyuan.retrofit.sentinel.sample.sentinel;
 
 import io.github.liuziyuan.retrofit.core.exception.RetrofitExtensionException;
-import io.github.liuziyuan.retrofit.extension.sentinel.core.BaseFallBack;
-import io.github.liuziyuan.retrofit.extension.sentinel.core.interceptor.SentinelBlockException;
+import io.github.liuziyuan.retrofit.core.proxy.BaseFallBack;
 import lombok.extern.slf4j.Slf4j;
 import io.github.liuziyuan.retrofit.sentinel.sample.ApiResponse;
 import io.github.liuziyuan.retrofit.sentinel.sample.HelloBean;
@@ -31,7 +30,7 @@ public class RetrofitSentinelApiFallBack extends BaseFallBack<RetrofitExtensionE
     }
 
     @Override
-    protected void getFallBackException(RetrofitExtensionException e) {
+    protected void setFallBackException(RetrofitExtensionException e) {
         this.exception = e;
     }
 }
