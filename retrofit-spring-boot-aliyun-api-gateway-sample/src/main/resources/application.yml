@@ -1,0 +1,9 @@
+retrofit:
+  aliyun:
+    api-gateway:
+      app-key: 123456
+      app-secret: 123456
+      host: http://localhost:8080
+      scheme: https
+      okhttp:
+        ok-http-config-clazz: io.github.liuziyuan.retrofit.spring.boot.aliyun.api.gateway.samples.CustomOkHttpConfig
