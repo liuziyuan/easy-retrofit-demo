@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <groupId>io.github.liuziyuan</groupId>
         <artifactId>retrofit-demo-parent</artifactId>
@@ -11,7 +10,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>retrofit-spring-boot-starter-sample-dynamic-url</artifactId>
+    <artifactId>retrofit-spring-boot-web-starter-sample</artifactId>
+    <groupId>io.github.liuziyuan</groupId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -20,23 +20,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>converter-gson</artifactId>
-            <version>2.9.0</version>
-        </dependency>
 
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-spring-boot-starter</artifactId>
-            <version>${retrofit.spring.boot.version}</version>
-        </dependency>
-
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <artifactId>retrofit-spring-boot-web-starter</artifactId>
+            <version>${retrofit.spring.boot.web.version}</version>
         </dependency>
 
 
@@ -54,19 +42,7 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>logging-interceptor</artifactId>
-            <version>4.9.3</version>
         </dependency>
 
         <!--spring boot components-->
@@ -82,7 +58,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

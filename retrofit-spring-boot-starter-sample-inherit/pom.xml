@@ -44,6 +44,7 @@
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>retrofit-spring-boot-starter</artifactId>
+            <version>${retrofit.spring.boot.version}</version>
         </dependency>
 
         <!--lombok-->

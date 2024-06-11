@@ -33,6 +33,7 @@
         <module>retrofit-spring-boot-reactor-starter-sample</module>
         <module>retrofit-spring-loadbalancer-samples</module>
         <module>retrofit-spring-boot-sentinel-sample</module>
+        <module>retrofit-spring-boot-aliyun-api-gateway-sample</module>
     </modules>
 
     <properties>
@@ -42,19 +43,20 @@
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <retrofit.spring.boot.version>1.4.1</retrofit.spring.boot.version>
+        <retrofit.spring.boot.version>1.5.0</retrofit.spring.boot.version>
         <retrofit.spring.boot.reactor.version>1.5.1</retrofit.spring.boot.reactor.version>
         <retrofit.spring.boot.web.version>1.5.1</retrofit.spring.boot.web.version>
         <retrofit.spring.boot.loadbalancer.version>1.2.1</retrofit.spring.boot.loadbalancer.version>
         <retrofit.spring.boot.sentinel.version>1.2.1</retrofit.spring.boot.sentinel.version>
+        <retrofit.spring.boot.aliyun.api.gateway.version>0.1.0</retrofit.spring.boot.aliyun.api.gateway.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.github.liuziyuan</groupId>
-                <artifactId>retrofit-spring-boot-starter</artifactId>
-                <version>${retrofit.spring.boot.version}</version>
+                <artifactId>retrofit-aliyun-api-gateway-spring-boot-starter</artifactId>
+                <version>${retrofit.spring.boot.aliyun.api.gateway.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
