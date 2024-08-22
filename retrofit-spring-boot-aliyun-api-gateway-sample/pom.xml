@@ -10,70 +10,21 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>retrofit-spring-boot-aliyun-api-gateway-spring-boot-starter-sample</artifactId>
+    <artifactId>retrofit-spring-boot-aliyun-api-gateway-sample</artifactId>
     <groupId>io.github.liuziyuan</groupId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <retrofit.spring.boot.starter.version>1.5.0</retrofit.spring.boot.starter.version>
-        <retrofit.adapter.simple.body.version>1.1.0</retrofit.adapter.simple.body.version>
-        <retrofit.extension.aliyun.api.gateway.version>0.1.0</retrofit.extension.aliyun.api.gateway.version>
-        <retrofit.version>2.11.0</retrofit.version>
     </properties>
 
     <dependencies>
 
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-extension-aliyun-api-gateway-spring-boot-starter</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-spring-boot-starter</artifactId>
-            <version>${retrofit.spring.boot.starter.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-adapter-simple-body</artifactId>
-            <version>${retrofit.adapter.simple.body.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.liuziyuan</groupId>
-            <artifactId>retrofit-extension-aliyun-api-gateway-spring-boot-starter</artifactId>
-            <version>${retrofit.extension.aliyun.api.gateway.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>converter-jackson</artifactId>
-            <version>${retrofit.version}</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>adapter-guava</artifactId>
-            <version>${retrofit.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>adapter-rxjava3</artifactId>
-            <version>${retrofit.version}</version>
+            <artifactId>retrofit-aliyun-api-gateway-spring-boot-starter</artifactId>
+            <version>${retrofit.spring.boot.aliyun.api.gateway.version}</version>
         </dependency>
 
 
