@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.builder.api;
 
 
-import io.github.liuziyuan.retrofit.core.builder.BaseConverterFactoryBuilder;
+import io.github.easyretrofit.core.builder.BaseConverterFactoryBuilder;
 import retrofit2.Converter;
 import retrofit2.converter.gson.GsonConverterFactory;
 

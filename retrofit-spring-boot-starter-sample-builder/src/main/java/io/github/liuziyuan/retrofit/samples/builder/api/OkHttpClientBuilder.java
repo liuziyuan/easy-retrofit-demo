@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.builder.api;
 
-import io.github.liuziyuan.retrofit.core.builder.BaseOkHttpClientBuilder;
+
+import io.github.easyretrofit.core.builder.BaseOkHttpClientBuilder;
 import okhttp3.OkHttpClient;
 
 import java.time.Duration;

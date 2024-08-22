@@ -1,8 +1,8 @@
 package io.github.liuziyuan.retrofit.samples.builder.api;
 
-import io.github.liuziyuan.retrofit.core.RetrofitResourceContext;
-import io.github.liuziyuan.retrofit.core.extension.BaseInterceptor;
-import io.github.liuziyuan.retrofit.core.resource.RetrofitApiServiceBean;
+import io.github.easyretrofit.core.RetrofitResourceContext;
+import io.github.easyretrofit.core.extension.BaseInterceptor;
+import io.github.easyretrofit.core.resource.RetrofitApiInterfaceBean;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.Request;
@@ -33,7 +33,7 @@ public class MyRetrofitInterceptor extends BaseInterceptor {
     protected Response executeIntercept(Chain chain) {
         Request request = chain.request();
         String clazzName = Objects.requireNonNull(request.tag(Invocation.class)).method().getDeclaringClass().getName();
-        final RetrofitApiServiceBean currentServiceBean = context.getRetrofitApiServiceBean(clazzName);
+        final RetrofitApiInterfaceBean currentServiceBean = context.getRetrofitApiInterfaceBean(clazzName);
         // TODO if you need
         return chain.proceed(request);
     }

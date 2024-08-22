@@ -1,8 +1,8 @@
 package io.github.liuziyuan.retrofit.samples.builder.api;
 
-import io.github.liuziyuan.retrofit.core.OverrideRule;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
+import io.github.easyretrofit.core.OverrideRule;
+import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.samples.builder.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.Body;
