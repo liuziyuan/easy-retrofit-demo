@@ -12,4 +12,4 @@ app:
 logging:
   level:
     root: info
-    io.github.liuziyuan: debug
+    io.github.easyretrofit: debug
