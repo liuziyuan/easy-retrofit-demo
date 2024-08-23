@@ -27,6 +27,6 @@ public interface HelloApi {
      * @param message message
      * @return
      */
-    @GET("backend/v1/hello/{message}")
+    @GET("hello/{message}")
     Call<HelloBean> hello(@Path("message") String message);
 }

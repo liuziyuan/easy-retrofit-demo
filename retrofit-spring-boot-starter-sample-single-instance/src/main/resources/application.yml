@@ -8,9 +8,9 @@ spring:
 app:
   hello:
     v1:
-      url: http://localhost:9100/
+      url: http://localhost:9100/backend/v1
     v2:
-      url: http://localhost:9100/
+      url: http://localhost:9100/backend/v2
 
 okhttpclient:
   timeout: 30000
