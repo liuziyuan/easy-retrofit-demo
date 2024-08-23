@@ -17,7 +17,7 @@ import retrofit2.http.Path;
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
 public interface DynamicBaseApi {
 
-    @GET("hello/{message}")
+    @GET("backend/v1/hello/{message}")
     Call<ResponseBody> hello(@Path("message") String message);
 
 }

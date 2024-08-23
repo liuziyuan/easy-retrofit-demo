@@ -2,6 +2,7 @@ package io.github.liuziyuan.retrofit.samples.awesome.controller;
 
 import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicBaseApi;
 import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi;
+import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi2;
 import io.github.liuziyuan.retrofit.samples.awesome.api.HelloApi;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ResponseBody;
@@ -37,12 +38,14 @@ public class HelloController {
 
     @Resource
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi2")
-    private DynamicInheritApi dynamicInheritApi2;
+    private DynamicInheritApi2 dynamicInheritApi2;
 
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
         final ResponseBody body = helloApi.hello(message).execute().body();
+//        return ResponseEntity.ok(body.string());
         final ResponseBody body1 = dynamicBaseApi.hello(message).execute().body();
+//        return ResponseEntity.ok(body1.string());
         return ResponseEntity.ok(body.string() + "-" + body1.string());
     }
 
