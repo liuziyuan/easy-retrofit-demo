@@ -1,10 +1,10 @@
 package io.github.liuziyuan.retrofit.samples.global.config.api;
 
-import io.github.liuziyuan.retrofit.core.OverrideRule;
-import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
+import io.github.easyretrofit.core.OverrideRule;
+import io.github.easyretrofit.core.annotation.InterceptorType;
+import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitInterceptor;
+import io.github.easyretrofit.core.annotation.RetrofitPath;
 import io.github.liuziyuan.retrofit.samples.global.config.domain.HelloBean;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -20,7 +20,7 @@ import retrofit2.http.Path;
 // use @RetrofitUrlPrefix
 @RetrofitBuilder(baseUrl = "${app.url.host}", globalOverwriteRule = OverrideRule.GLOBAL_FIRST)
 @RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
-@RetrofitUrlPrefix("${app.url.prefix}")
+@RetrofitPath("${app.url.prefix}")
 public interface HelloApi {
     /**
      * call hello API method of backend service

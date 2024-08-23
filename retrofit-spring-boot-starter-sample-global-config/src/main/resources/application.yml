@@ -17,10 +17,11 @@ okhttpclient:
 logging:
   level:
     root: info
-    io.github.liuziyuan: debug
+    io.github.easyretrofit: debug
 
 retrofit:
   global:
-    converter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.GsonConvertFactoryBuilder
-    call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.RxJavaCallAdapterFactoryBuilder
-    enable: true
+    builder:
+      enable: true
+      converter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.GsonConvertFactoryBuilder
+      call-adapter-factory-builder-clazz: io.github.liuziyuan.retrofit.samples.global.config.api.RxJavaCallAdapterFactoryBuilder

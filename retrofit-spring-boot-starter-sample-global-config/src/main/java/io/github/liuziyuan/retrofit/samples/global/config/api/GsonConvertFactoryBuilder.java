@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.global.config.api;
 
 
-import io.github.liuziyuan.retrofit.core.builder.BaseConverterFactoryBuilder;
+import io.github.easyretrofit.core.builder.BaseConverterFactoryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
