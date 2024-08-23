@@ -1,11 +1,9 @@
 package io.github.liuziyuan.retrofit.samples.prefix;
 
-import io.github.liuziyuan.retrofit.spring.boot.EnableRetrofit;
+import io.github.easyretrofit.spring.boot.EnableRetrofit;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @author liuziyuan
