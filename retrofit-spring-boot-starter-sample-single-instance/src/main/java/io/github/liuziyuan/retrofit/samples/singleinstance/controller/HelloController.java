@@ -2,7 +2,6 @@ package io.github.liuziyuan.retrofit.samples.singleinstance.controller;
 
 import io.github.liuziyuan.retrofit.samples.singleinstance.api.HelloApi;
 import io.github.liuziyuan.retrofit.samples.singleinstance.api.HelloApiV2;
-import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
