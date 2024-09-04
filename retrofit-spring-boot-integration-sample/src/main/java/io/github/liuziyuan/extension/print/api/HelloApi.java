@@ -1,8 +1,6 @@
 package io.github.liuziyuan.extension.print.api;
 
 
-import io.github.easyretrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.extension.spring.boot.print.PrintInfo;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;

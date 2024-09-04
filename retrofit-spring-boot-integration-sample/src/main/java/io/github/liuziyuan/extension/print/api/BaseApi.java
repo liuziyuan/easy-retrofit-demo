@@ -2,11 +2,7 @@ package io.github.liuziyuan.extension.print.api;
 
 
 import io.github.easyretrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.extension.spring.boot.print.PrintInfo;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
+import io.github.liuziyuan.retrofit.integration.spring.boot.web.PrintInfo;
 
 /**
  * <p><b>Base URLs should always end in {@code /}.</b>

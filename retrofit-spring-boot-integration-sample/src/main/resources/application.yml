@@ -4,3 +4,10 @@ server:
 spring:
   application:
     name: integration
+
+
+logging:
+  level:
+    root: info
+    io.github.easyretrofit: debug
+
