@@ -34,6 +34,7 @@
         <module>retrofit-spring-loadbalancer-samples</module>
         <module>retrofit-spring-boot-sentinel-sample</module>
         <module>retrofit-spring-boot-aliyun-api-gateway-sample</module>
+        <module>retrofit-spring-boot-extension-sample</module>
     </modules>
 
     <properties>
