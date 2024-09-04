@@ -3,4 +3,4 @@ server:
 
 spring:
   application:
-    name: quickstart
+    name: extension-print

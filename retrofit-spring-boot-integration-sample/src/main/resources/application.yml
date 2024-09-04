@@ -1,0 +1,6 @@
+server:
+  port: 9302
+
+spring:
+  application:
+    name: integration

@@ -35,6 +35,7 @@
         <module>retrofit-spring-boot-sentinel-sample</module>
         <module>retrofit-spring-boot-aliyun-api-gateway-sample</module>
         <module>retrofit-spring-boot-extension-sample</module>
+        <module>retrofit-spring-boot-integration-sample</module>
     </modules>
 
     <properties>
