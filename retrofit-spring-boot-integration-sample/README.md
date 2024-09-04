@@ -6,7 +6,7 @@
 3. run `curl` command on terminal
 
 ``` shell
-curl http://localhost:9301/v1/hello/abc 
+curl http://localhost:9302/v1/hello/abc 
 ```
 
 
