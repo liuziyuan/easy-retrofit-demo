@@ -10,7 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>retrofit-spring-boot-starter-sample-integration</artifactId>
+    <artifactId>retrofit-spring-boot-integration-sample</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
