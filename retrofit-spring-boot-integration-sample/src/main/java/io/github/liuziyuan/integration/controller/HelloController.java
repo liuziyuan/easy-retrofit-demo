@@ -1,7 +1,7 @@
-package io.github.liuziyuan.extension.print.controller;
+package io.github.liuziyuan.integration.controller;
 
 
-import io.github.liuziyuan.extension.print.api.HelloApi;
+import io.github.liuziyuan.integration.api.HelloApi;
 import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

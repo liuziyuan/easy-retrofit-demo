@@ -1,4 +1,4 @@
-package io.github.liuziyuan.extension.print.api;
+package io.github.liuziyuan.integration.api;
 
 
 import io.github.easyretrofit.core.annotation.RetrofitBuilder;

@@ -1,4 +1,4 @@
-package io.github.liuziyuan.extension.print.api;
+package io.github.liuziyuan.integration.api;
 
 
 import okhttp3.ResponseBody;

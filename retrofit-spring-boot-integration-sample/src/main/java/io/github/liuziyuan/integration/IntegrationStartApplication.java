@@ -1,4 +1,4 @@
-package io.github.liuziyuan.extension.print;
+package io.github.liuziyuan.integration;
 
 
 import io.github.easyretrofit.spring.boot.EnableRetrofit;

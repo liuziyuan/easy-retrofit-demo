@@ -1,4 +1,4 @@
-package io.github.liuziyuan.extension.print.domain;
+package io.github.liuziyuan.integration.domain;
 
 
 /**
