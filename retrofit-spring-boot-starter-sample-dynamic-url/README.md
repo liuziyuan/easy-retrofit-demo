@@ -20,6 +20,11 @@ this request into MyRetrofitInterceptor and MyRetrofitInterceptor1, return error
 curl http://localhost:9107/v1/hello3/abc 
 ```
 
+this request goto backend service, return success response
+``` shell
+curl http://localhost:9107/v1/hello4/abc 
+```
+
 this curl request will return error, because the DynamicBaseUrl is http://localhost:9200/, but you just start backend Service on port 9100.
 
 you can debug into DynamicBaseUrlInterceptor file, you will see the `realDynamicHostUrl` is `http://localhost:9200/`

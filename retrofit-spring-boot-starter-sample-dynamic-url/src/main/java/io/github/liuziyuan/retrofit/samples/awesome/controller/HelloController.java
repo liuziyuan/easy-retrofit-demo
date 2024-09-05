@@ -1,9 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.awesome.controller;
 
-import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicBaseApi;
-import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi;
-import io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi2;
-import io.github.liuziyuan.retrofit.samples.awesome.api.HelloApi;
+import io.github.liuziyuan.retrofit.samples.awesome.api.*;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +32,8 @@ public class HelloController {
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi")
     private DynamicInheritApi dynamicInheritApi;
 
+    @Resource
+    private DummyDynamicInheritApi dummyDynamicInheritApi;
 
     @Resource
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi2")
@@ -60,6 +59,13 @@ public class HelloController {
     public ResponseEntity<String> hello3(@PathVariable String message) throws IOException
     {
         ResponseBody body = dynamicInheritApi2.hello(message).execute().body();
+        return ResponseEntity.ok(body.string());
+    }
+
+    @GetMapping("/v1/hello4/{message}")
+    public ResponseEntity<String> hello4(@PathVariable String message) throws IOException
+    {
+        ResponseBody body = dummyDynamicInheritApi.hello(message).execute().body();
         return ResponseEntity.ok(body.string());
     }
 
