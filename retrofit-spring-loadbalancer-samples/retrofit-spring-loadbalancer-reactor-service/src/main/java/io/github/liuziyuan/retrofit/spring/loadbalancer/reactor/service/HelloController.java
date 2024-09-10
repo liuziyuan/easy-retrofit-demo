@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.spring.loadbalancer.reactor.service;
 
-import io.reactivex.rxjava3.core.BackpressureStrategy;
-import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Observable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

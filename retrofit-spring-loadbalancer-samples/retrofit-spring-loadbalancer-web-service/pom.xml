@@ -28,15 +28,26 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.github.liuziyuan</groupId>
-			<artifactId>retrofit-spring-boot-web-starter</artifactId>
-			<version>${retrofit.spring.boot.web.version}</version>
+			<groupId>io.github.easyretrofit</groupId>
+			<artifactId>easy-retrofit-spring-boot-starter</artifactId>
+			<version>${easyretrofit.spring.boot.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.liuziyuan</groupId>
-			<artifactId>retrofit-extension-loadbalancer-spring-cloud-starter</artifactId>
-			<version>${retrofit.spring.boot.loadbalancer.version}</version>
+			<groupId>io.github.easyretrofit</groupId>
+			<artifactId>easy-retrofit-adapter-simple-body</artifactId>
+			<version>1.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>io.github.easyretrofit</groupId>
+			<artifactId>extension-loadbalancer-spring-cloud-starter</artifactId>
+			<version>${retrofit.spring.cloud.loadbalancer.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>converter-gson</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

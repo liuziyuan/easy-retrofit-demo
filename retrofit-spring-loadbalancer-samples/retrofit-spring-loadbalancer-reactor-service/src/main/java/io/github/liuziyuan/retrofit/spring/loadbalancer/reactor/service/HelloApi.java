@@ -1,17 +1,19 @@
 package io.github.liuziyuan.retrofit.spring.loadbalancer.reactor.service;
 
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
-import io.github.liuziyuan.retrofit.extension.spring.cloud.loadbalancer.RetrofitLoadBalancer;
-import io.reactivex.rxjava3.core.Observable;
+import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitInterceptorParam;
+import io.github.easyretrofit.core.annotation.RetrofitPath;
+import io.github.easyretrofit.extension.spring.cloud.loadbalancer.RetrofitLoadBalancer;
+import io.reactivex.Observable;
 import reactor.core.publisher.Mono;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-
-@RetrofitBuilder(baseUrl = "${app.url.host}")
-@RetrofitUrlPrefix("${app.url.prefix}")
-@RetrofitLoadBalancer(name = "${app.cloud.name}")
+@RetrofitBuilder(baseUrl = "${app.url.host}",
+        addCallAdapterFactory = RxJava2CallAdapterFactoryBuilder.class,
+        addConverterFactory = GsonConverterFactoryBuilder.class)
+@RetrofitPath("${app.url.prefix}")
+@RetrofitLoadBalancer(name = "${app.cloud.name}", extensions = @RetrofitInterceptorParam(sort = 10))
 public interface HelloApi {
 
     @GET("hello/{message}")
