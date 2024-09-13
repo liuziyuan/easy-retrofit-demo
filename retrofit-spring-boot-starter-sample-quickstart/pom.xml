@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>io.github.easyretrofit</groupId>
-            <artifactId>easy-retrofit-spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
             <version>${easyretrofit.spring.boot.version}</version>
         </dependency>
 

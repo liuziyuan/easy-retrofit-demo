@@ -17,26 +17,34 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <retrofit.version>2.11.0</retrofit.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>io.github.easyretrofit</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${easyretrofit.spring.boot.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-gson</artifactId>
-            <version>2.9.0</version>
-            <scope>compile</scope>
+            <version>${retrofit.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>adapter-rxjava</artifactId>
-            <version>2.9.0</version>
+            <version>${retrofit.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>io.github.easyretrofit</groupId>
-            <artifactId>easy-retrofit-spring-boot-starter</artifactId>
-            <version>${easyretrofit.spring.boot.version}</version>
+            <artifactId>adapter-simple-body</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
         <!--lombok-->
