@@ -24,6 +24,7 @@
         <module>backend-service</module>
         <module>retrofit-spring-boot-starter-sample-quickstart</module>
         <module>retrofit-spring-boot-starter-sample-builder</module>
+        <module>retrofit-spring-boot-starter-sample-callfactory</module>
         <module>retrofit-spring-boot-starter-sample-inherit</module>
         <module>retrofit-spring-boot-starter-sample-single-instance</module>
         <module>retrofit-spring-boot-starter-sample-global-config</module>
