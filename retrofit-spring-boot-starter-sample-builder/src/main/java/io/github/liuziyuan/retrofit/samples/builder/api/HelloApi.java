@@ -21,7 +21,7 @@ import rx.Observable;
  */
 @RetrofitBuilder(baseUrl = "${app.backend.url}",
         addConverterFactory = {GsonConvertFactoryBuilder.class},
-        addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class},
+        addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class, SimpleBodyCallAdapterFactoryBuilder.class},
         callbackExecutor = CallBackExecutorBuilder.class,
         client = OkHttpClientBuilder.class,
         validateEagerly = false,
