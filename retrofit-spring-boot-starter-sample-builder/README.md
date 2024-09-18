@@ -9,6 +9,21 @@
 curl http://localhost:9102/v1/hello/abc 
 ```
 
+Rxjava3 int type support
+``` shell 
+curl http://localhost:9102/v1/hello/rxjava3/int 
+```
+
+Simple Body int type support
+``` shell
+curl http://localhost:9102/v1/hello/simplebody/int
+```
+
+Mono type support
+``` shell
+curl http://localhost:9102/v1/hello/mono/int
+```
+
 ## How to use
 
 Inherit `BaseCallAdapterFactoryBuilder` to build a Retrofit `CallAdapter.Factory`

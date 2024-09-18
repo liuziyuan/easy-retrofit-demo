@@ -37,4 +37,9 @@ public class HelloController {
         return ResponseEntity.ok(helloBean);
     }
 
+    @GetMapping("/v1/hello/int")
+    public ResponseEntity<Integer> helloIntBody() {
+        return ResponseEntity.ok(new Random().nextInt());
+    }
+
 }

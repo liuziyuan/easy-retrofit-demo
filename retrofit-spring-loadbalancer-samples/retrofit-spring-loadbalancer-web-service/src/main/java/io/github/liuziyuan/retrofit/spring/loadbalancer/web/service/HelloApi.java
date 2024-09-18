@@ -13,7 +13,7 @@ import retrofit2.http.Path;
         addCallAdapterFactory = SimpleBodyAdapterFactoryBuilder.class,
         addConverterFactory = GsonConverterFactoryBuilder.class)
 @RetrofitPath("${app.url.prefix}")
-@RetrofitLoadBalancer(name = "${app.cloud.name}", extensions = @RetrofitInterceptorParam(sort = 10))
+//@RetrofitLoadBalancer(name = "${app.cloud.name}", extensions = @RetrofitInterceptorParam(sort = 10))
 public interface HelloApi {
 
     @GET("hello/{message}")

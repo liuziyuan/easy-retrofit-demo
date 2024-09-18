@@ -20,6 +20,13 @@
             <version>${retrofit.spring.boot.sentinel.version}</version>
         </dependency>
 
+        <!--spring boot components-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>retrofit-spring-boot-web-starter</artifactId>

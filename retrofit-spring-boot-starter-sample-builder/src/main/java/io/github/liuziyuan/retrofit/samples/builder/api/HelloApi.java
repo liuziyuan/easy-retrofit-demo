@@ -4,6 +4,7 @@ import io.github.easyretrofit.core.OverrideRule;
 import io.github.easyretrofit.core.annotation.RetrofitBuilder;
 import io.github.easyretrofit.core.annotation.RetrofitInterceptor;
 import io.github.liuziyuan.retrofit.samples.builder.domain.HelloBean;
+import reactor.core.publisher.Mono;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -21,7 +22,7 @@ import rx.Observable;
  */
 @RetrofitBuilder(baseUrl = "${app.backend.url}",
         addConverterFactory = {GsonConvertFactoryBuilder.class},
-        addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class, SimpleBodyCallAdapterFactoryBuilder.class},
+        addCallAdapterFactory = {RxJavaCallAdapterFactoryBuilder.class, SimpleBodyCallAdapterFactoryBuilder.class, ReactorCallAdapterFactoryBuilder.class},
         callbackExecutor = CallBackExecutorBuilder.class,
         client = OkHttpClientBuilder.class,
         validateEagerly = false,
@@ -39,4 +40,13 @@ public interface HelloApi {
 
     @POST("backend/v1/hello")
     Observable<HelloBean> helloObservable(@Body HelloBean message);
+
+    @GET("backend/v1/hello/int")
+    Observable<Integer> helloIntObservable();
+
+    @GET("backend/v1/hello/int")
+    Integer helloIntBody();
+
+    @GET("backend/v1/hello/int")
+    Mono<Integer> helloIntMono();
 }
