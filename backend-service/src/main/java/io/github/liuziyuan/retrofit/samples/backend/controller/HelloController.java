@@ -42,4 +42,9 @@ public class HelloController {
         return ResponseEntity.ok(new Random().nextInt());
     }
 
+    @GetMapping("/v1/error/400")
+    public ResponseEntity<HelloBean> helloError400() {
+        return ResponseEntity.badRequest().build();
+    }
+
 }

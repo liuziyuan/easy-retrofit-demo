@@ -1,0 +1,15 @@
+server:
+  port: 9105
+
+spring:
+  application:
+    name: inherit
+
+app:
+  hello:
+    url: http://localhost:9100/
+
+logging:
+  level:
+    root: info
+    io.github.easyretrofit: debug
