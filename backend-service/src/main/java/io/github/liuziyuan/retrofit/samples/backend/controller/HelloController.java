@@ -47,4 +47,9 @@ public class HelloController {
         return ResponseEntity.badRequest().build();
     }
 
+    @GetMapping("/v1/error/404")
+    public ResponseEntity<HelloBean> helloError404() {
+        return ResponseEntity.notFound().build();
+    }
+
 }

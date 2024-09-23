@@ -10,10 +10,9 @@ import retrofit2.http.GET;
 
 @EnableRetry(extensions = @RetrofitInterceptorParam(sort = 10))
 @RetrofitBuilder(baseUrl = "${app.hello.url}")
-@Retry(resourceName = "helloApi", config = HelloRetryConfig.class)
-public interface HelloApi {
+@Retry(resourceName = "helloApi2", config = HelloRetryConfig.class)
+public interface HelloApi2 {
 
-    @Retry(resourceName = "error400")
     @GET("backend/v1/error/400")
     Call<ResponseBody> error400();
 

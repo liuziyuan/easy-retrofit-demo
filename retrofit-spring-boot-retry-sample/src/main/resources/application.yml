@@ -1,5 +1,5 @@
 server:
-  port: 9105
+  port: 9115
 
 spring:
   application:
@@ -9,7 +9,29 @@ app:
   hello:
     url: http://localhost:9100/
 
+
 logging:
   level:
     root: info
     io.github.easyretrofit: debug
+
+retrofit:
+  retry:
+    configs:
+      default:
+        max-retries: 3
+        wait-duration: 200
+        backoff-exponential-multiplier: 0.2
+        retry-exceptions:
+          - java.io.IOException
+        retry-on-result-predicate: io.github.liuziyuan.retrofit.samples.retry.config.RetryOnResultPredicate
+    instances:
+      error400:
+        base-config: default
+        max-retries: 2
+#        wait-duration: 500
+#        backoff-exponential-multiplier: 0.5
+      helloApi2:
+        base-config: default
+        max-retries: 2
+

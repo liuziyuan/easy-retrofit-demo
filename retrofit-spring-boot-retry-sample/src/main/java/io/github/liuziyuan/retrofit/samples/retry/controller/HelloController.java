@@ -1,7 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.retry.controller;
 
 import io.github.liuziyuan.retrofit.samples.retry.api.HelloApi;
-import io.github.liuziyuan.retrofit.samples.retry.domain.HelloBean;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
