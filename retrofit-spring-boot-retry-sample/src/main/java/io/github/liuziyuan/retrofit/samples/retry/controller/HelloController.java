@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.retry.controller;
 
+import io.github.liuziyuan.retrofit.samples.retry.HelloBean;
 import io.github.liuziyuan.retrofit.samples.retry.api.HelloApi;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ResponseBody;
@@ -27,7 +28,7 @@ public class HelloController {
 
     @GetMapping("/{message}")
     public ResponseEntity<String> hello(@PathVariable String message) throws IOException {
-        Call<ResponseBody> responseBodyCall = helloApi.error400();
-        return ResponseEntity.ok(responseBodyCall.execute().body().string());
+        HelloBean helloBean = helloApi.error400();
+        return ResponseEntity.ok("hello");
     }
 }

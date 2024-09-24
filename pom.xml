@@ -47,7 +47,8 @@
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <easyretrofit.spring.boot.version>1.2.0-SNAPSHOT</easyretrofit.spring.boot.version>
+        <easyretrofit.spring.boot.version>1.1.2-SNAPSHOT</easyretrofit.spring.boot.version>
+        <easyretrofit.adpater.simplebody.version>1.1.0</easyretrofit.adpater.simplebody.version>
         <retrofit.version>2.11.0</retrofit.version>
         <retrofit.spring.boot.version>1.5.0</retrofit.spring.boot.version>
         <retrofit.spring.boot.reactor.version>1.5.1</retrofit.spring.boot.reactor.version>
