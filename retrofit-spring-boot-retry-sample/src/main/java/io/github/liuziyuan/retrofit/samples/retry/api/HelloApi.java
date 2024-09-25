@@ -6,12 +6,14 @@ import io.github.easyretrofit.extension.retry.core.annotation.EnableRetry;
 import io.github.easyretrofit.extension.retry.core.annotation.Retry;
 import io.github.liuziyuan.retrofit.samples.retry.HelloBean;
 import io.github.liuziyuan.retrofit.samples.retry.config.GsonConvertFactoryBuilder;
+import io.github.liuziyuan.retrofit.samples.retry.config.ReactorCallAdapterFactoryBuilder;
 import io.github.liuziyuan.retrofit.samples.retry.config.SimpleBodyCallAdapterFactoryBuilder;
+import reactor.core.publisher.Mono;
 import retrofit2.http.GET;
 
 @EnableRetry(fallback = RetryApiFallBack.class, extensions = @RetrofitInterceptorParam(sort = 10))
 @RetrofitBuilder(baseUrl = "${app.hello.url}",
-        addCallAdapterFactory = SimpleBodyCallAdapterFactoryBuilder.class,
+        addCallAdapterFactory = {SimpleBodyCallAdapterFactoryBuilder.class, ReactorCallAdapterFactoryBuilder.class},
         addConverterFactory = GsonConvertFactoryBuilder.class
 )
 //@Retry(resourceName = "helloApi", config = HelloRetryConfig.class)
@@ -24,4 +26,8 @@ public interface HelloApi {
     @Retry(resourceName = "error404")
     @GET("backend/v1/error/404")
     HelloBean error404();
+
+    @Retry(resourceName = "helloMono400", fallbackMethod = "helloMono400")
+    @GET("backend/v1/error/400")
+    Mono<HelloBean> helloMono400();
 }

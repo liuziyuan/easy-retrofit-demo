@@ -34,4 +34,7 @@ retrofit:
       helloApi2:
         base-config: default
         max-retries: 2
+      helloMono400:
+        base-config: default
+        max-retries: 3
 
