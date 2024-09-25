@@ -1,4 +1,4 @@
-#Retrofit-spring-boot-starter-samples-url-prefix
+#Retrofit-spring-boot-starter-samples-dynamic-url
 
 ## How to run
 1. Start backend service

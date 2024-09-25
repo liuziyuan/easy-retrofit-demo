@@ -1,3 +1,5 @@
+io.github.liuziyuan group, Deprecated
+
 # How to use
 
 1. Start Eureka Server

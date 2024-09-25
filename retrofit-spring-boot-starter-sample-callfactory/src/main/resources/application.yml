@@ -1,8 +1,0 @@
-server:
-  port: 9102
-
-spring:
-  application:
-    name: builder
-
-app.backend.url: http://localhost:9100/
