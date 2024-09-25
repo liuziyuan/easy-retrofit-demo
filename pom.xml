@@ -47,8 +47,12 @@
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <easyretrofit.spring.boot.version>1.1.2-SNAPSHOT</easyretrofit.spring.boot.version>
-        <easyretrofit.adpater.simplebody.version>1.1.0</easyretrofit.adpater.simplebody.version>
+        <easyretrofit.core.version>1.1.2</easyretrofit.core.version>
+        <easyretrofit.spring.boot.version>1.1.2</easyretrofit.spring.boot.version>
+        <easyretrofit.adpater.reactor.version>1.0.0</easyretrofit.adpater.reactor.version>
+        <easyretrofit.adpater.simplebody.version>1.1.1</easyretrofit.adpater.simplebody.version>
+        <easyretrofit.converter.basetype.version>1.1.1</easyretrofit.converter.basetype.version>
+        <easyretrofit.extension.retry.version>1.1.0</easyretrofit.extension.retry.version>
         <retrofit.version>2.11.0</retrofit.version>
         <retrofit.spring.boot.version>1.5.0</retrofit.spring.boot.version>
         <retrofit.spring.boot.reactor.version>1.5.1</retrofit.spring.boot.reactor.version>
@@ -61,9 +65,50 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.liuziyuan</groupId>
-                <artifactId>retrofit-aliyun-api-gateway-spring-boot-starter</artifactId>
-                <version>${retrofit.spring.boot.aliyun.api.gateway.version}</version>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${easyretrofit.spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>extension-retry-spring-boot-starter</artifactId>
+                <version>${easyretrofit.extension.retry.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>adapter-simple-body</artifactId>
+                <version>${easyretrofit.adpater.simplebody.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>converter-simple-body-base-type</artifactId>
+                <version>${easyretrofit.converter.basetype.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>adapter-reactor</artifactId>
+                <version>${easyretrofit.adpater.reactor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-gson</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>adapter-rxjava</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>adapter-rxjava2</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>adapter-rxjava3</artifactId>
+                <version>${retrofit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -28,7 +28,6 @@
         <dependency>
             <groupId>io.github.easyretrofit</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${easyretrofit.spring.boot.version}</version>
         </dependency>
 
         <!--spring boot components-->
