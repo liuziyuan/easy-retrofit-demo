@@ -5,6 +5,8 @@ spring:
   application:
     name: integration
 
+integration:
+  baseUrl: http://localhost:9100/
 
 logging:
   level:

@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author liuziyuan
  */
 
-@EnableRetrofit
+@EnableRetrofit(basePackages = "io.github.liuziyuan.integration.api")
 @SpringBootApplication
 public class IntegrationStartApplication {
     public static void main(String[] args) {
