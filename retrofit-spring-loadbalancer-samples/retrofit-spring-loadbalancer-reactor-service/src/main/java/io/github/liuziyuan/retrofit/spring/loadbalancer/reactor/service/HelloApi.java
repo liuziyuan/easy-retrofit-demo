@@ -10,7 +10,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 @RetrofitBuilder(baseUrl = "${app.url.host}",
-        addCallAdapterFactory = RxJava2CallAdapterFactoryBuilder.class,
+        addCallAdapterFactory = {RxJava2CallAdapterFactoryBuilder.class, ReactorAdapterFactoryBuilder.class},
         addConverterFactory = GsonConverterFactoryBuilder.class)
 @RetrofitPath("${app.url.prefix}")
 @RetrofitLoadBalancer(name = "${app.cloud.name}", extensions = @RetrofitInterceptorParam(sort = 10))

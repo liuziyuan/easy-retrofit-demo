@@ -32,6 +32,10 @@
         </dependency>
         <dependency>
             <groupId>io.github.easyretrofit</groupId>
+            <artifactId>adapter-reactor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.easyretrofit</groupId>
             <artifactId>adapter-simple-body</artifactId>
         </dependency>
         <dependency>
