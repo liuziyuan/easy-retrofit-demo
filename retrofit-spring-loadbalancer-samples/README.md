@@ -2,6 +2,9 @@ io.github.liuziyuan group, Deprecated
 
 # How to use
 
+Please note to match the versions of springboot and springcloud , https://spring.io/projects/spring-cloud#overview
+
+
 1. Start Eureka Server
 
 ```shell
