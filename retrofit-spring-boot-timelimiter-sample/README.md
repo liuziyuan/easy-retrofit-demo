@@ -1,0 +1,23 @@
+#Retrofit-spring-boot-starter-samples-inherit
+
+## How to run
+1. Start backend service
+2. Start current project
+3. run `curl` command on terminal
+
+adapter is SimpleBody type, return is JOPO Bean
+``` shell
+curl http://localhost:9115/v1/hello/abc 
+```
+
+adapter is SimpleBody type, return Mono
+``` shell
+curl http://localhost:9115/v2/hello/abc
+```
+
+adapter is Reactor type, return Mono
+``` shell
+curl http://localhost:9115/v2/hello/abc
+```
+
+

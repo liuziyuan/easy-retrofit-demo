@@ -52,4 +52,14 @@ public class HelloController {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/v1/error/timeout")
+    public ResponseEntity<HelloBean> helloErrorTimeout() {
+        try {
+            Thread.sleep(1000 * 30);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.ok(null);
+    }
+
 }

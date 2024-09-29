@@ -32,6 +32,7 @@
         <module>retrofit-spring-boot-web-starter-sample</module>
         <module>retrofit-spring-boot-reactor-starter-sample</module>
         <module>retrofit-spring-loadbalancer-samples</module>
+        <module>retrofit-spring-boot-timelimiter-sample</module>
         <module>retrofit-spring-boot-sentinel-sample</module>
         <module>retrofit-spring-boot-extension-sample</module>
         <module>retrofit-spring-boot-integration-sample</module>
@@ -52,6 +53,7 @@
         <easyretrofit.converter.basetype.version>1.1.1</easyretrofit.converter.basetype.version>
         <easyretrofit.extension.retry.version>1.1.0</easyretrofit.extension.retry.version>
         <easyretrofit.spring.cloud.loadbalancer.version>1.0.0</easyretrofit.spring.cloud.loadbalancer.version>
+        <easyretrofit.extension.timelimiter.version>1.0.0</easyretrofit.extension.timelimiter.version>
         <retrofit.version>2.11.0</retrofit.version>
         <retrofit.spring.boot.version>1.5.0</retrofit.spring.boot.version>
         <retrofit.spring.boot.reactor.version>1.5.1</retrofit.spring.boot.reactor.version>
@@ -85,6 +87,11 @@
                 <groupId>io.github.easyretrofit</groupId>
                 <artifactId>adapter-reactor</artifactId>
                 <version>${easyretrofit.adpater.reactor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.easyretrofit</groupId>
+                <artifactId>extension-timelimiter-spring-boot-starter</artifactId>
+                <version>${easyretrofit.extension.timelimiter.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
