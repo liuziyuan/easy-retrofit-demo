@@ -11,12 +11,10 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * @author liuziyuan
  */
 @Slf4j
-@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.retry.api")
+@EnableRetrofit(basePackages = "io.github.liuziyuan.retrofit.samples.timelimiter.api")
 @SpringBootApplication
-public class RetryApplication {
+public class TimeLimiterApplication {
     public static void main(String[] args) {
-        final ConfigurableApplicationContext run = SpringApplication.run(RetryApplication.class, args);
-        final ConfigurableEnvironment environment = run.getEnvironment();
-        log.info("swagger-ui URL: http://localhost:{}/swagger-ui/index.html", environment.getProperty("server.port"));
+        SpringApplication.run(TimeLimiterApplication.class, args);
     }
 }

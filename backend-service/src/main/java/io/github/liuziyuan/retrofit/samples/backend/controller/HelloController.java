@@ -55,11 +55,13 @@ public class HelloController {
     @GetMapping("/v1/error/timeout")
     public ResponseEntity<HelloBean> helloErrorTimeout() {
         try {
-            Thread.sleep(1000 * 30);
+            Thread.sleep(1000 * 3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return ResponseEntity.ok(null);
+        HelloBean helloBean = new HelloBean();
+        helloBean.setMessage("backend");
+        return ResponseEntity.ok(helloBean);
     }
 
 }

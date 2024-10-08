@@ -1,5 +1,5 @@
 server:
-  port: 9115
+  port: 9111
 
 spring:
   application:
@@ -19,9 +19,9 @@ retrofit:
   timelimiter:
     configs:
       default:
-        connect-timeout: 5000
-        read-timeout: 5000
-        write-timeout: 5000
+        connect-timeout: 5000ms
+        read-timeout: 5000ms
+        write-timeout: 5000ms
     instances:
       errorTimeout:
         base-config: default

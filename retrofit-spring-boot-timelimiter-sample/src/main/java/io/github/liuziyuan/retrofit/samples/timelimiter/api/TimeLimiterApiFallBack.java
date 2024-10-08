@@ -19,21 +19,10 @@ public class TimeLimiterApiFallBack extends BaseFallBack<RetrofitExtensionExcept
     }
 
     @Override
-    public HelloBean error400() {
+    public HelloBean errorTimeout() {
         HelloBean helloBean = new HelloBean();
-        helloBean.setMessage("error400 fallback");
-        log.info("error400 fallback {}", exception.getMessage());
+        helloBean.setMessage("errorTimeout fallback");
+        log.info("errorTimeout fallback {}", exception.getMessage());
         return helloBean;
-    }
-
-    @Override
-    public HelloBean error404() {
-        return null;
-    }
-
-    @Override
-    public Mono<HelloBean> helloMono400() {
-        log.info("error400 fallback {}", exception.getMessage());
-        return Mono.just(new HelloBean());
     }
 }
