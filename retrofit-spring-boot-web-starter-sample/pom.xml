@@ -22,9 +22,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.github.liuziyuan</groupId>
+            <groupId>io.github.easyretrofit</groupId>
             <artifactId>retrofit-spring-boot-web-starter</artifactId>
-            <version>${retrofit.spring.boot.web.version}</version>
+            <version>1.1.0</version>
         </dependency>
 
 
