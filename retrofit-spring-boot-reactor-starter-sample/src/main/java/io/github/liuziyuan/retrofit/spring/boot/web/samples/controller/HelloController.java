@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author liuziyuan
@@ -31,5 +32,28 @@ public class HelloController {
         Observable<HelloBean> observable = helloApi.hello2(message);
         return Mono.from(observable.toFlowable(BackpressureStrategy.BUFFER));
     }
+
+    @GetMapping("/v3/hello/{message}")
+    public Mono<List<HelloBean>> hello3(@PathVariable String message) throws IOException {
+        Observable<HelloBean> observable = helloApi.hello2(message);
+        Observable<HelloBean> observable1 = helloApi.hello2(message);
+
+        Observable<List<HelloBean>> zip = Observable.zip(observable, observable1, (helloBean, helloBean2) -> {
+            return List.of(helloBean, helloBean2);
+        });
+        return Mono.from(zip.toFlowable(BackpressureStrategy.BUFFER));
+    }
+
+    @GetMapping("/v4/hello/{message}")
+    public Mono<List<HelloBean>> hello4(@PathVariable String message) throws IOException {
+        Mono<HelloBean> mono = helloApi.hello(message);
+        Mono<HelloBean> Mono1 = helloApi.hello(message);
+
+        Mono<List<HelloBean>> zip = Mono.zip(mono, Mono1, (helloBean, helloBean2) -> {
+            return List.of(helloBean, helloBean2);
+        });
+        return zip;
+    }
+
 
 }

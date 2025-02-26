@@ -55,7 +55,7 @@ public class HelloController {
     @GetMapping("/v1/error/timeout")
     public ResponseEntity<HelloBean> helloErrorTimeout() {
         try {
-            Thread.sleep(1000 * 3);
+            Thread.sleep(1000 * 6);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -13,3 +13,14 @@ curl http://localhost:9111/v1/hello/abc
 ```shell
 curl http://localhost:9111/v2/hello/abc
 ```
+
+
+3. Multiple request Rxjava Observable to Mono type
+```shell
+curl http://localhost:9111/v3/hello/abc
+```
+
+4. Multiple request Mono Observable to Mono type
+```shell
+curl http://localhost:9111/v4/hello/abc
+```

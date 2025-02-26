@@ -1,7 +1,7 @@
 package io.github.liuziyuan.retrofit.spring.boot.web.samples.api;
 
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
+import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitPath;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
 import io.reactivex.rxjava3.core.Observable;
 import reactor.core.publisher.Mono;
@@ -17,7 +17,7 @@ import retrofit2.http.Path;
 
 // use @RetrofitUrlPrefix
 @RetrofitBuilder(baseUrl = "${app.url.host}")
-@RetrofitUrlPrefix("${app.url.prefix}")
+@RetrofitPath("${app.url.prefix}")
 public interface HelloApi {
     /**
      * call hello API method of backend service
