@@ -23,11 +23,10 @@ import retrofit2.http.GET;
 @RetrofitFallBack(RetryApiFallBack.class)
 public interface HelloApi {
 
-    @Retry(resourceName = "error400")
     @GET("/backend/v1/hello/ABC")
     HelloBean hello();
 
-    @Retry(resourceName = "error404")
+    @Retry(resourceName = "error400")
     @GET("backend/v1/error/400")
     HelloBean error400();
 

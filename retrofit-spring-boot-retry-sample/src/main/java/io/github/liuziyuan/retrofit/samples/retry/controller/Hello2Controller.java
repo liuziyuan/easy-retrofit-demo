@@ -1,6 +1,7 @@
 package io.github.liuziyuan.retrofit.samples.retry.controller;
 
 //import io.github.easyretrofit.core.exception.RetrofitExtensionException;
+
 import io.github.liuziyuan.retrofit.samples.retry.HelloBean;
 import io.github.liuziyuan.retrofit.samples.retry.api.HelloApi;
 import io.reactivex.rxjava3.core.Flowable;
@@ -27,6 +28,16 @@ public class Hello2Controller {
     private HelloApi helloApi;
     @Autowired
     private View error;
+
+    @GetMapping("/v5/hello")
+    public HelloBean getHelloBean() {
+        return helloApi.hello();
+    }
+
+    @GetMapping("/v5/hello/error")
+    public HelloBean getHelloBeanError() {
+        return helloApi.error400();
+    }
 
 
     @GetMapping("/v2/hello/{message}")

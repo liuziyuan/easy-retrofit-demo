@@ -13,7 +13,7 @@ public class HelloController {
     @GetMapping("/v1/hello/{message}")
     public ResponseEntity<HelloBean> helloPath(@PathVariable String message) {
         HelloBean helloBean = new HelloBean();
-        helloBean.setMessage(message + new Random().nextInt());
+        helloBean.setMessage(message);
         return ResponseEntity.ok(helloBean);
     }
 
@@ -25,9 +25,9 @@ public class HelloController {
     }
 
     @GetMapping("/v1/hello")
-    public ResponseEntity<HelloBean> helloParam(@RequestParam String message) {
+    public ResponseEntity<HelloBean> helloParam() {
         HelloBean helloBean = new HelloBean();
-        helloBean.setMessage(message + new Random().nextInt());
+        helloBean.setMessage("hello" + new Random().nextInt());
         return ResponseEntity.ok(helloBean);
     }
 
