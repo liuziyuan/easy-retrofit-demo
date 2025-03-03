@@ -20,5 +20,9 @@ adapter is Reactor type, return Mono
 curl http://localhost:9110/v3/hello/abc
 ```
 
+``` shell
+curl http://localhost:9110/v4/hello/abc
+```
+
 所有非SimpleBody 类型的adapter, 都不会走fallback, 而是走自己的异常处理块 
 
