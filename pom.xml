@@ -32,7 +32,6 @@
         <module>retrofit-spring-boot-web-starter-sample</module>
         <module>retrofit-spring-loadbalancer-samples</module>
         <module>retrofit-spring-boot-timelimiter-sample</module>
-        <module>retrofit-spring-boot-sentinel-sample</module>
         <module>retrofit-spring-boot-extension-sample</module>
         <module>retrofit-spring-boot-integration-sample</module>
         <module>retrofit-spring-boot-retry-sample</module>
@@ -54,10 +53,6 @@
         <easyretrofit.spring.cloud.loadbalancer.version>1.0.0</easyretrofit.spring.cloud.loadbalancer.version>
         <easyretrofit.extension.timelimiter.version>1.0.0</easyretrofit.extension.timelimiter.version>
         <retrofit.version>2.11.0</retrofit.version>
-        <retrofit.spring.boot.version>1.5.0</retrofit.spring.boot.version>
-        <retrofit.spring.boot.reactor.version>1.5.1</retrofit.spring.boot.reactor.version>
-        <retrofit.spring.boot.web.version>1.5.1</retrofit.spring.boot.web.version>
-        <retrofit.spring.boot.sentinel.version>1.2.1</retrofit.spring.boot.sentinel.version>
     </properties>
 
     <dependencyManagement>
