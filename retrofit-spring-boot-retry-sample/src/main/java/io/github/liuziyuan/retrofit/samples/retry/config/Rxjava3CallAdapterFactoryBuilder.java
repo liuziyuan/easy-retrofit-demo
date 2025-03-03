@@ -7,9 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 import retrofit2.CallAdapter;
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 
 @Component
-public class ReactorCallAdapterFactoryBuilder extends BaseCallAdapterFactoryBuilder implements ApplicationContextAware {
+public class Rxjava3CallAdapterFactoryBuilder extends BaseCallAdapterFactoryBuilder implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 
     @Override
@@ -17,7 +18,7 @@ public class ReactorCallAdapterFactoryBuilder extends BaseCallAdapterFactoryBuil
 
 //        RetrofitExtensionFallBackHandler fallBackHandler = new RetrofitExtensionFallBackHandler(new SpringCDIBeanManager(applicationContext));
 //        return ReactorCallAdapterFactory.create(fallBackHandler);
-        return ReactorCallAdapterFactory.createSync();
+        return RxJava3CallAdapterFactory.create();
     }
 
     @Override

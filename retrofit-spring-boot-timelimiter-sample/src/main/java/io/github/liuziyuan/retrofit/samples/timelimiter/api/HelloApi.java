@@ -11,7 +11,7 @@ import io.github.liuziyuan.retrofit.samples.timelimiter.config.ReactorCallAdapte
 import io.github.liuziyuan.retrofit.samples.timelimiter.config.SimpleBodyCallAdapterFactoryBuilder;
 import retrofit2.http.GET;
 
-@EnableTimeLimiter(fallback = TimeLimiterApiFallBack.class, extensions = @RetrofitInterceptorParam(sort = 10))
+//@EnableTimeLimiter(fallback = TimeLimiterApiFallBack.class, extensions = @RetrofitInterceptorParam(sort = 10))
 @RetrofitBuilder(baseUrl = "${app.hello.url}",
         addCallAdapterFactory = {SimpleBodyCallAdapterFactoryBuilder.class, ReactorCallAdapterFactoryBuilder.class},
         addConverterFactory = GsonConvertFactoryBuilder.class,

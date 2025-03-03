@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+//import javax.annotation.Resource;
 import java.io.IOException;
 
 /**
@@ -20,22 +20,22 @@ import java.io.IOException;
 @RestController
 public class HelloController {
 
-    @Resource
+    @Autowired
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.HelloApi")
     private HelloApi helloApi;
 
-    @Resource
+    @Autowired
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicBaseApi")
     private DynamicBaseApi dynamicBaseApi;
 
-    @Resource
+    @Autowired
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi")
     private DynamicInheritApi dynamicInheritApi;
 
-    @Resource
+    @Autowired
     private DummyDynamicInheritApi dummyDynamicInheritApi;
 
-    @Resource
+    @Autowired
     @Qualifier("io.github.liuziyuan.retrofit.samples.awesome.api.DynamicInheritApi2")
     private DynamicInheritApi2 dynamicInheritApi2;
 

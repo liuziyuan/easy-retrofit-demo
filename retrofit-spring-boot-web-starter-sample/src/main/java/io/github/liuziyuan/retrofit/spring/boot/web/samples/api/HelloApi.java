@@ -1,10 +1,12 @@
 package io.github.liuziyuan.retrofit.spring.boot.web.samples.api;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
-import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
+import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitPath;
+//import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
+//import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
+//import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
+//import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -24,7 +26,7 @@ import java.util.concurrent.CompletableFuture;
 // use @RetrofitUrlPrefix
 @RetrofitBuilder(baseUrl = "${app.url.host}")
 //@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
-@RetrofitUrlPrefix("${app.url.prefix}")
+@RetrofitPath("${app.url.prefix}")
 public interface HelloApi {
     /**
      * call hello API method of backend service

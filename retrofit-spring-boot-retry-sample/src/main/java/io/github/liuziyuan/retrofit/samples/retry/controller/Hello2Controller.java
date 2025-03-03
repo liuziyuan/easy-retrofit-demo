@@ -1,8 +1,9 @@
 package io.github.liuziyuan.retrofit.samples.retry.controller;
 
-import io.github.easyretrofit.core.exception.RetrofitExtensionException;
+//import io.github.easyretrofit.core.exception.RetrofitExtensionException;
 import io.github.liuziyuan.retrofit.samples.retry.HelloBean;
 import io.github.liuziyuan.retrofit.samples.retry.api.HelloApi;
+import io.reactivex.rxjava3.core.Flowable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +37,19 @@ public class Hello2Controller {
     @GetMapping("/v3/hello/{message}")
     public Mono<HelloBean> helloMono400(@PathVariable String message) throws IOException {
         return helloApi.helloMono400().onErrorResume(error -> {
+            log.info("error400 fallback {}", error.getMessage());
+            HelloBean helloBean = new HelloBean();
+            helloBean.setMessage("mono error400 fallback");
+            return Mono.just(helloBean);
+        });
+    }
+
+
+    @GetMapping("/v4/hello/{message}")
+    public Mono<HelloBean> helloFlowable400(@PathVariable String message) throws IOException {
+
+        Flowable<HelloBean> helloBeanFlowable = helloApi.helloFlowable400();
+        return helloBeanFlowable.to(Mono::from).onErrorResume(error -> {
             log.info("error400 fallback {}", error.getMessage());
             HelloBean helloBean = new HelloBean();
             helloBean.setMessage("mono error400 fallback");

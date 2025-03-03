@@ -37,4 +37,7 @@ retrofit:
       helloMono400:
         base-config: default
         max-retries: 3
+      helloFlowable400:
+        base-config: default
+        max-retries: 3
 
