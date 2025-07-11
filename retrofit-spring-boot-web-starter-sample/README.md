@@ -23,3 +23,11 @@ curl http://localhost:9111/v3/hello/abc
 ```shell
 curl http://localhost:9111/v4/hello/abc
 ```
+
+```shell
+curl http://localhost:9110/v1/api/response
+```
+
+```shell
+curl http://localhost:9110/v1/api/response/failure
+```

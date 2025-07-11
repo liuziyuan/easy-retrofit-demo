@@ -8,10 +8,7 @@ import io.github.easyretrofit.core.annotation.RetrofitPath;
 //import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 //import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.HTTP;
 import retrofit2.http.Path;
 
 import java.util.concurrent.CompletableFuture;
@@ -48,4 +45,5 @@ public interface HelloApi {
 
     @GET("hello")
     String hello4(@Path("message") String message);
+
 }

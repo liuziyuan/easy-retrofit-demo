@@ -10,7 +10,7 @@ app:
   url:
     host: http://localhost:9110/
     host2: http://localhost:9110/
-    prefix: /backend/v1
+    prefix: /backend/v1/hello
 
 
 logging:

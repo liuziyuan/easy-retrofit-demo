@@ -31,7 +31,6 @@
         <module>retrofit-spring-boot-starter-sample-url-prefix</module>
         <module>retrofit-spring-boot-web-starter-sample</module>
         <module>retrofit-spring-loadbalancer-samples</module>
-        <module>retrofit-spring-boot-timelimiter-sample</module>
         <module>retrofit-spring-boot-extension-sample</module>
         <module>retrofit-spring-boot-integration-sample</module>
         <module>retrofit-spring-boot-retry-sample</module>
@@ -44,15 +43,14 @@
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <easyretrofit.core.version>1.2.0</easyretrofit.core.version>
-        <easyretrofit.spring.boot.version>1.1.5</easyretrofit.spring.boot.version>
+        <easyretrofit.spring.boot.version>1.3.1</easyretrofit.spring.boot.version>
         <easyretrofit.adpater.reactor.version>1.0.0</easyretrofit.adpater.reactor.version>
-        <easyretrofit.adpater.simplebody.version>1.1.1</easyretrofit.adpater.simplebody.version>
-        <easyretrofit.converter.basetype.version>1.1.1</easyretrofit.converter.basetype.version>
+        <easyretrofit.adpater.simplebody.version>1.2.0</easyretrofit.adpater.simplebody.version>
+        <easyretrofit.converter.basetype.version>1.2.0</easyretrofit.converter.basetype.version>
         <easyretrofit.extension.retry.version>1.1.1</easyretrofit.extension.retry.version>
         <easyretrofit.spring.cloud.loadbalancer.version>1.0.0</easyretrofit.spring.cloud.loadbalancer.version>
         <easyretrofit.extension.timelimiter.version>1.0.0</easyretrofit.extension.timelimiter.version>
-        <retrofit.version>2.11.0</retrofit.version>
+        <retrofit.version>3.0.0</retrofit.version>
     </properties>
 
     <dependencyManagement>
@@ -81,11 +79,6 @@
                 <groupId>io.github.easyretrofit</groupId>
                 <artifactId>adapter-reactor</artifactId>
                 <version>${easyretrofit.adpater.reactor.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.easyretrofit</groupId>
-                <artifactId>extension-timelimiter-spring-boot-starter</artifactId>
-                <version>${easyretrofit.extension.timelimiter.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>

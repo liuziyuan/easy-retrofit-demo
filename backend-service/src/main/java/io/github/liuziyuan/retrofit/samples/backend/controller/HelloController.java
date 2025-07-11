@@ -1,5 +1,6 @@
 package io.github.liuziyuan.retrofit.samples.backend.controller;
 
+import io.github.liuziyuan.retrofit.samples.backend.ApiResponse;
 import io.github.liuziyuan.retrofit.samples.backend.domain.HelloBean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -63,5 +64,15 @@ public class HelloController {
         helloBean.setMessage("backend");
         return ResponseEntity.ok(helloBean);
     }
+    @GetMapping("/v1/api/response")
+    public ApiResponse<HelloBean> helloApiResponse() {
+        HelloBean helloBean = new HelloBean();
+        helloBean.setMessage("hello" + new Random().nextInt());
+        return ApiResponse.success(helloBean);
+    }
 
+    @GetMapping("/v1/api/response/failure")
+    public ApiResponse<HelloBean> helloApiResponseFailure() throws Exception {
+        throw new Exception("error");
+    }
 }
