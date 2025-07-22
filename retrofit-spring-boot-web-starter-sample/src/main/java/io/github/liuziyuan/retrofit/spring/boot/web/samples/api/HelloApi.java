@@ -1,13 +1,17 @@
 package io.github.liuziyuan.retrofit.spring.boot.web.samples.api;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import io.github.easyretrofit.core.annotation.InterceptorType;
 import io.github.easyretrofit.core.annotation.RetrofitBuilder;
+import io.github.easyretrofit.core.annotation.RetrofitInterceptorParam;
 import io.github.easyretrofit.core.annotation.RetrofitPath;
 //import io.github.liuziyuan.retrofit.core.annotation.InterceptorType;
 //import io.github.liuziyuan.retrofit.core.annotation.RetrofitBuilder;
 //import io.github.liuziyuan.retrofit.core.annotation.RetrofitInterceptor;
 //import io.github.liuziyuan.retrofit.core.annotation.RetrofitUrlPrefix;
+import io.github.easyretrofit.extension.httplog.core.annotation.HttpLog;
 import io.github.liuziyuan.retrofit.spring.boot.web.samples.domain.HelloBean;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -23,6 +27,7 @@ import java.util.concurrent.CompletableFuture;
 // use @RetrofitUrlPrefix
 @RetrofitBuilder(baseUrl = "${app.url.host}")
 //@RetrofitInterceptor(handler = LoggingInterceptor.class, type = InterceptorType.NETWORK)
+@HttpLog(level = HttpLoggingInterceptor.Level.BODY, extensions = @RetrofitInterceptorParam(type = InterceptorType.NETWORK))
 @RetrofitPath("${app.url.prefix}")
 public interface HelloApi {
     /**
